@@ -1,38 +1,115 @@
+/* --- General Page Settings --- */
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+  font-family: "PT Serif", "Georgia", "Times New Roman", serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.6;
+  color: #ffffff;           /* White text for black background */
+  background-color: #000000; /* Black background */
 }
 
+/* --- Header --- */
 header {
-  border-bottom: 2px solid #333;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  text-align: center;       /* Center everything in header */
+  padding: 30px 20px;
+  background-color: #000000; /* Keep header black */
+  border-bottom: 1px solid #555; /* subtle separation */
 }
 
 header h1 {
   margin: 0;
+  font-size: 2.5em;
+  color: #ffffff;           /* White text */
+}
+
+/* --- Navigation Menu --- */
+nav {
+  margin-top: 15px;
 }
 
 nav a {
   text-decoration: none;
-  color: #006699;
-  margin-right: 10px;
+  color: #ffffff;           /* White links */
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s;
 }
 
 nav a:hover {
+  color: #ffcc00;           /* Hover color */
   text-decoration: underline;
 }
 
-footer {
-  border-top: 2px solid #333;
-  margin-top: 20px;
-  padding-top: 10px;
-  font-size: 0.9em;
-  color: #555;
+/* --- Main Content --- */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #ddd;              /* slightly lighter for readability */
+}
+
+/* --- Images --- */
 img {
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
-  margin-top: 10px;
+  margin: 15px 0;
+  display: block;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #000000;
+  border-top: 1px solid #555;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 40px;
+}
+
+/* --- Links in Content --- */
+a {
+  color: #ffcc00;           /* gold color for links */
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* --- Gallery Section Styling --- */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-container img {
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
 }
