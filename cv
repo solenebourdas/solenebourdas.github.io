@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae - Solène Bourdas</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f9f9f9; /* Keep main page light */
+      color: #000;
+      font-family: 'PT Serif', serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .cv-container {
+      margin: 30px auto;
+      max-width: 90%;
+    }
+
+    /* Black background only behind the PDF */
+    .pdf-wrapper {
+      background-color: #000;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    iframe {
+      width: 80vw;
+      height: 90vh;
+      border: none;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .download-btn:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Solène Bourdas</h1>
+    <nav>
+      <a href="index.html">About me</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV</a>
+      <a href="publications.html">Publications</a>
+      <a href="communication.html">Communication</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <div class="cv-container">
+    <h2>My CV</h2>
+    <div class="pdf-wrapper">
+      <iframe src="docs/Solene_Bourdas_CV.pdf"></iframe>
+    </div>
+    <br>
+    <a href="docs/Solene_Bourdas_CV.pdf" download class="download-btn">Download CV</a>
+  </div>
+</body>
+</html>
