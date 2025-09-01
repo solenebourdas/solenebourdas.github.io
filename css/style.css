@@ -1,12 +1,14 @@
 /* --- General Page Settings --- */
-body {
-  font-family: "PT Serif", "Georgia", "Times New Roman", serif;
+html, body {
+  height: 100%;               /* Make body fill the viewport */
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  color: #ffffff;           /* White text for black background */
-  background-color: #000000; /* Black background */
+  background-color: #000000;  /* Black background */
+  color: #ffffff;             /* White text */
+  font-family: 'PT Serif', "Georgia", "Times New Roman", serif;
 }
+
 
 /* --- Header --- */
 header {
