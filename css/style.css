@@ -168,7 +168,7 @@ a:hover {
   position: fixed;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.15; /* makes them subtle in the background */
+  opacity: 1; /* makes them subtle in the background */
   z-index: -1;
   pointer-events: none;
 }
