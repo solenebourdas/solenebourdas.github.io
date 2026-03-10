@@ -168,7 +168,7 @@ a:hover {
   position: fixed;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.8;                /* subtle watermark effect */
+  opacity: 1;                /* subtle watermark effect */
   pointer-events: none;
   z-index: 0;
   filter: grayscale(100%) brightness(0.8); /* makes fossils look like subtle illustrations */
