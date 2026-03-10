@@ -161,3 +161,34 @@ a:hover {
   padding: 10px;
   font-weight: bold;
 }
+
+/* Fossil background images */
+
+.fossil {
+  position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.15; /* makes them subtle in the background */
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Ammonite top left */
+
+.fossil-ammonite {
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  background-image: url("../Drawings/Ammonite2.png");
+}
+
+/* Nautilus bottom right */
+
+.fossil-nautilus {
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  height: 350px;
+  background-image: url("../Drawings/Nautilus2.png");
+}
