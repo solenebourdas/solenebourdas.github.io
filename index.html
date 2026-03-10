@@ -6,6 +6,17 @@
   <title>Home - Solène Bourdas</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+  <script>
+window.addEventListener("scroll", function() {
+  let scrollY = window.scrollY;
+
+  document.querySelector(".fossil-ammonite").style.transform =
+    "translateY(" + scrollY * 0.2 + "px)";
+
+  document.querySelector(".fossil-nautilus").style.transform =
+    "translateY(" + scrollY * -0.2 + "px)";
+});
+</script>
 <body>
   <div class="fossil fossil-ammonite"></div>
   <div class="fossil fossil-nautilus"></div>
