@@ -168,9 +168,10 @@ a:hover {
   position: fixed;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.9;
-  pointer-events: none; /* puts fossils behind content */
-  z-index: -1;
+  opacity: 0.8;                /* subtle watermark effect */
+  pointer-events: none;
+  z-index: 0;
+  filter: grayscale(100%) brightness(0.8); /* makes fossils look like subtle illustrations */
 }
 
 /* Ammonite top left */
@@ -191,4 +192,9 @@ a:hover {
   width: 350px;
   height: 350px;
   background-image: url("../Drawings/Nautilus2.png");
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
 }
