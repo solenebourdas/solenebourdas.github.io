@@ -169,8 +169,7 @@ a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.7;
-  pointer-events: none;
-  z-index: -1;   /* puts fossils behind content */
+  pointer-events: none;   /* puts fossils behind content */
 }
 
 /* Ammonite top left */
