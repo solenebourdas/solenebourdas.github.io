@@ -72,13 +72,6 @@ p {
 }
 
 /* --- Images --- */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin: 15px 0;
-  display: block;
-}
 
 /* --- Footer --- */
 footer {
@@ -208,4 +201,12 @@ header, main, footer {
 .profile-img {
   width: 200px;
   border-radius: 0; /* removes round corners */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 15px 0;
+  display: block;
 }
