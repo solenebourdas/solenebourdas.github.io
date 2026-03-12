@@ -195,7 +195,7 @@ header, main, footer {
 .about-container {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 10px;
 }
 
 .profile-img {
