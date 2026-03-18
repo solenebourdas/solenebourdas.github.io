@@ -199,7 +199,8 @@ header, main, footer {
 
 .profile-img {
   width: 300px;
-  border-radius: 0; /* removes round corners */
+  border-radius: 0;
+  margin: 0;   /* remove top & bottom margin */
 }
 
 img {
