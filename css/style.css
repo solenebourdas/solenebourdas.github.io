@@ -67,8 +67,9 @@ h2 {
 
 p {
   font-size: 0.9em;
-  margin-bottom: 25px;
-  color: #ddd;              /* slightly lighter for readability */
+  margin-top: 20px;     /* space before paragraph */
+  margin-bottom: 25px;  /* space after paragraph */
+  color: #ddd;
 }
 
 /* --- Images --- */
