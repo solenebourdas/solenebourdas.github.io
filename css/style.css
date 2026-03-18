@@ -22,13 +22,13 @@ main {
 /* --- Header --- */
 header {
   text-align: center;       /* Center everything in header */
-  padding: 30px 20px 10px 20px;
+  padding: 20px 20px 10px 20px;
   background-color: #000000; /* Keep header black */
   border-bottom: 1px solid #555; /* subtle separation */
 }
 
 header h1 {
-  margin: 0 0 50px 0; /* top 0, right 0, bottom 30px, left 0 */
+  margin: 0 0 30px 0; /* top 0, right 0, bottom 30px, left 0 */
   font-size: 2.3em;
   color: #ffffff;
 }
@@ -68,7 +68,7 @@ h2 {
 p {
   font-size: 0.9em;
   margin-top: 20px;     /* space before paragraph */
-  margin-bottom: 25px;  /* space after paragraph */
+  margin-bottom: 15px;  /* space after paragraph */
   color: #ddd;
 }
 
