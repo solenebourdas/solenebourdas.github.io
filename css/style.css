@@ -67,8 +67,8 @@ h2 {
 
 p {
   font-size: 0.9em;
-  margin-top: 20px;     /* space before paragraph */
-  margin-bottom: 15px;  /* space after paragraph */
+  margin-top: 25px;     /* space before paragraph */
+  margin-bottom: 0px;  /* space after paragraph */
   color: #ddd;
 }
 
