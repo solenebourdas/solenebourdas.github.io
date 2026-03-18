@@ -214,4 +214,9 @@ img {
 .about-text {
   display: flex;
   flex-direction: column;
+  max-width: 600px;
+}
+
+.about-container {
+  gap: 40px;
 }
