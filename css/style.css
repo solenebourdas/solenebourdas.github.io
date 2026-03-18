@@ -210,3 +210,8 @@ img {
   margin: 30px 0;
   display: block;
 }
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+}
