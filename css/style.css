@@ -302,7 +302,7 @@ footer {
 /* Make iframe fill the full viewport width */
 .pdf-full {
   width: 100vw;       /* viewport width = full page width */
-  height: 120vh;       /* almost full screen height */
+  height: 160vh;       /* almost full screen height */
   border: none;       /* remove default border */
   display: block;     /* remove inline spacing */
   margin: 0;          /* remove any default margin */
