@@ -307,6 +307,6 @@ footer {
 
 .pdf-wrapper iframe {
   width: 100%;       /* fills container */
-  height: 90vh;      /* almost full screen height */
+  height: 50vh;      /* almost full screen height */
   border: none;
 }
