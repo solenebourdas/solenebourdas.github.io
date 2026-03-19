@@ -201,9 +201,9 @@ header, main, footer {
 }
 
 .profile-img {
-  width: 250px;
+  width: 180px;
   border-radius: 0;
-  margin-top: 30px; /* small space from top */
+  margin: 0; /* IMPORTANT: removes big gaps */
 }
 
 img {
@@ -222,4 +222,18 @@ img {
 
 .about-container {
   gap: 40px;
+}
+
+.images-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-img.small {
+  width: 180px;
+}
+
+.profile-img.large {
+  width: 180px; /* same width = clean alignment */
 }
