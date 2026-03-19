@@ -303,9 +303,10 @@ footer {
 
 /* Main CV Page */
 .cv-page {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
+  flex: 1; 
 }
 
 /* Section styling */
