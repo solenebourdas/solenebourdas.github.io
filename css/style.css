@@ -1,112 +1,172 @@
-/* --- General Page Settings --- */
+/* ===================================================== */
+/* 1. GLOBAL / PAGE SETUP                                */
+/* ===================================================== */
+
+/* Applies to entire page */
 html, body {
-  height: 100%;               /* Make body fill the viewport */
-  margin: 0;
+  height: 100%;                /* Makes page fill full screen height */
+  margin: 0;                   /* Removes default browser spacing */
   padding: 0;
-  line-height: 1.6;
-  background-color: #000000;  /* Black background */
-  color: #ffffff;             /* White text */
+  line-height: 1.6;            /* Improves text readability */
+  background-color: #000000;   /* Black background */
+  color: #ffffff;              /* Default text = white */
   font-family: 'PT Serif', "Georgia", "Times New Roman", serif;
 }
 
+/* Makes footer stay at bottom */
 body {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  flex-direction: column;      /* Stack header / main / footer vertically */
+  min-height: 100vh;           /* Full screen height */
 }
+
+/* Main content expands to push footer down */
 main {
-  flex: 1;   /* main content takes remaining space */
+  flex: 1;
+  max-width: 900px;            /* Limits content width */
+  margin: 40px auto;           /* Centers + space above/below */
+  padding: 0 20px;             /* Side padding */
 }
 
 
-/* --- Header --- */
+/* ===================================================== */
+/* 2. HEADER + NAVIGATION                                */
+/* ===================================================== */
+
 header {
-  text-align: center;       /* Center everything in header */
-  padding: 20px 20px 10px 20px;
-  background-color: #000000; /* Keep header black */
-  border-bottom: 1px solid #555; /* subtle separation */
+  text-align: center;          /* Centers title + menu */
+  padding: 20px 20px 10px;
+  background-color: #000000;
+  border-bottom: 1px solid #555; /* Thin line under header */
 }
 
 header h1 {
-  margin: 0 0 30px 0; /* top 0, right 0, bottom 30px, left 0 */
+  margin: 0 0 30px 0;          /* Space below title */
   font-size: 2.3em;
-  color: #ffffff;
 }
 
-/* --- Navigation Menu --- */
+/* Navigation container */
 nav {
   margin-top: 10px;
 }
 
+/* Navigation links */
 nav a {
-  text-decoration: none;
-  color: #ffffff;           /* White links */
-  margin: 0 45px;
+  text-decoration: none;       /* Removes underline */
+  color: #ffffff;
+  margin: 0 45px;              /* Space between links */
   font-weight: bold;
   font-size: 1em;
-  transition: color 0.3s;
+  transition: color 0.3s;      /* Smooth hover effect */
 }
 
+/* Hover effect */
 nav a:hover {
-  color: #ffcc00           /* Hover color */
+  color: #ffcc00;              /* Gold color on hover */
 }
 
-/* --- Main Content --- */
-main {
-  max-width: 900px;
-  margin: 10px auto;
-  padding: 0 20px;
-}
+
+/* ===================================================== */
+/* 3. TEXT / TYPOGRAPHY                                  */
+/* ===================================================== */
 
 h2 {
   font-size: 2em;
-  margin-bottom: 10px; /* distance after the title */
-  margin-top: 0px;     /* distance above the title, closer to the line */
-  color: #ffffff;
+  margin-top: 0;               /* Removes space above */
+  margin-bottom: 10px;         /* Space below title */
 }
 
 p {
   font-size: 1em;
-  margin-top: 25px;     /* space before paragraph */
-  margin-bottom: 0px;  /* space after paragraph */
-  color: #ddd;
+  margin-top: 20px;            /* Space between paragraphs */
+  margin-bottom: 0;
+  color: #ddd;                 /* Slightly softer than white */
 }
 
+/* Adds extra space ONLY before first paragraph */
 .about-text p:first-child {
   margin-top: 40px;
 }
 
-/* --- Images --- */
 
-/* --- Footer --- */
-footer {
-  background-color: #000000;
-  border-top: 1px solid #555;
-  text-align: center;
-  padding: 15px 20px;
-  font-size: 0.9em;
-  color: #888;
-  margin-top: 40px;
-}
+/* ===================================================== */
+/* 4. LINKS (inside content)                             */
+/* ===================================================== */
 
-/* --- Links in Content --- */
 a {
-  color: #ffcc00;
-  text-decoration: none/* gold color for links */
+  color: #ffcc00;              /* Gold links */
+  text-decoration: none;
 }
 
 a:hover {
   color: #ffffff;
-  text-decoration: none;
 }
 
-/* --- Gallery Section Styling --- */
+
+/* ===================================================== */
+/* 5. ABOUT SECTION (IMAGE + TEXT LAYOUT)                */
+/* ===================================================== */
+
+.about-container {
+  display: flex;               /* Image left / text right */
+  align-items: flex-start;
+  gap: 40px;                   /* Space between image + text */
+}
+
+/* Left column (stacked images) */
+.images-column {
+  display: flex;
+  flex-direction: column;      /* Stack images vertically */
+  gap: 15px;
+}
+
+/* Individual profile images */
+.profile-img {
+  width: 180px;
+  border-radius: 0;
+  margin: 0;                   /* Removes default spacing */
+}
+
+/* Optional size variations */
+.profile-img.small {
+  width: 180px;
+}
+
+.profile-img.large {
+  width: 180px;                /* Same width for alignment */
+}
+
+/* Right text column */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+
+/* ===================================================== */
+/* 6. GENERAL IMAGE RULES                                */
+/* ===================================================== */
+
+img {
+  max-width: 100%;             /* Prevents overflow */
+  height: auto;                /* Keeps proportions */
+  border-radius: 10px;
+  display: block;
+}
+
+
+/* ===================================================== */
+/* 7. GALLERY                                            */
+/* ===================================================== */
+
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
 }
 
+/* Gallery images hover effect */
 .gallery-container img {
   border-radius: 8px;
   transition: transform 0.3s;
@@ -116,15 +176,11 @@ a:hover {
   transform: scale(1.05);
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 8px 0;
-  }
-}
 
-/* Projects Grid */
+/* ===================================================== */
+/* 8. PROJECT GRID                                       */
+/* ===================================================== */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -139,10 +195,11 @@ a:hover {
   cursor: pointer;
 }
 
+/* Project images */
 .project img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: cover;           /* Crops nicely */
   transition: transform 0.3s ease;
 }
 
@@ -150,6 +207,7 @@ a:hover {
   transform: scale(1.05);
 }
 
+/* Text overlay on images */
 .title-overlay {
   position: absolute;
   bottom: 0;
@@ -161,20 +219,22 @@ a:hover {
   font-weight: bold;
 }
 
-/* Fossil background images */
+
+/* ===================================================== */
+/* 9. FOSSIL BACKGROUND DECORATION                       */
+/* ===================================================== */
 
 .fossil {
   position: fixed;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 1;                /* subtle watermark effect */
-  pointer-events: none;
+  opacity: 1;
+  pointer-events: none;        /* Prevents clicking issues */
   z-index: 0;
-  filter: grayscale(100%) brightness(0.5); /* makes fossils look like subtle illustrations */
+  filter: grayscale(100%) brightness(0.5);
 }
 
-/* Ammonite top left */
-
+/* Top-left fossil */
 .fossil-ammonite {
   top: 200px;
   left: 0;
@@ -183,8 +243,7 @@ a:hover {
   background-image: url("../Drawings/Ammonite2.png");
 }
 
-/* Nautilus bottom right */
-
+/* Bottom-right fossil */
 .fossil-nautilus {
   bottom: 0;
   right: 0;
@@ -193,51 +252,47 @@ a:hover {
   background-image: url("../Drawings/Nautilus2.png");
 }
 
+/* Keeps content above fossils */
 header, main, footer {
   position: relative;
   z-index: 1;
 }
 
-.about-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
+
+/* ===================================================== */
+/* 10. FOOTER                                            */
+/* ===================================================== */
+
+footer {
+  background-color: #000000;
+  border-top: 1px solid #555;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 40px;
 }
 
-.profile-img {
-  width: 180px;
-  border-radius: 0;
-  margin: 0; /* IMPORTANT: removes big gaps */
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin: 50px 0;
-  display: block;
-}
+/* ===================================================== */
+/* 11. RESPONSIVE (MOBILE)                               */
+/* ===================================================== */
 
-.about-text {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-}
+@media (max-width: 600px) {
 
-.about-container {
-  gap: 40px;
-}
+  /* Stack navigation vertically */
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
 
-.images-column {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+  /* Stack image + text instead of side-by-side */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.profile-img.small {
-  width: 180px;
-}
-
-.profile-img.large {
-  width: 180px; /* same width = clean alignment */
+  .images-column {
+    align-items: center;
+  }
 }
