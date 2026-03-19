@@ -88,6 +88,10 @@ p {
   margin-top: 20px;
 }
 
+.highlight {
+  color: #ffcc00; /* gold */
+  font-weight: bold; /* optional */
+}
 
 /* ===================================================== */
 /* 4. LINKS (inside content)                             */
@@ -110,14 +114,14 @@ a:hover {
 .about-container {
   display: flex;               /* Image left / text right */
   align-items: flex-start;
-  gap: 40px;                   /* Space between image + text */
+  gap: 30px;                   /* Space between image + text */
 }
 
 /* Left column (stacked images) */
 .images-column {
   display: flex;
   flex-direction: column;      /* Stack images vertically */
-  gap: 15px;
+  gap: 25px;
 }
 
 
