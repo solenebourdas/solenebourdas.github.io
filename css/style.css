@@ -89,8 +89,7 @@ p {
 }
 
 .highlight {
-  color: #ffcc00; /* gold */
-  font-weight: bold; /* optional */
+  color: #ffcc00; /* gold */ 
 }
 
 /* ===================================================== */
@@ -234,14 +233,14 @@ img {
   opacity: 1;
   pointer-events: none;        /* Prevents clicking issues */
   z-index: 0;
-  filter: grayscale(100%) brightness(0.5);
+  filter: grayscale(100%) brightness(0.2);
 }
 
 /* Top-left fossil */
 .fossil-ammonite {
-  top: 200px;
+  top: 100px;
   left: 0;
-  width: 300px;
+  width: 500px;
   height: 300px;
   background-image: url("../Drawings/Ammonite2.png");
 }
@@ -250,7 +249,7 @@ img {
 .fossil-nautilus {
   bottom: 0;
   right: 0;
-  width: 300px;
+  width: 500px;
   height: 300px;
   background-image: url("../Drawings/Nautilus2.png");
 }
