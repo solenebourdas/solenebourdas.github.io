@@ -122,20 +122,21 @@ a:hover {
 
 /* Individual profile images */
 .profile-img {
-  width: 180px;
+  width: 250px;
   border-radius: 0;
   margin: 0;                   /* Removes default spacing */
 }
 
 /* Optional size variations */
 .profile-img.small {
-  width: 180px;
+  width: 250px;
 }
 
 .profile-img-bottom {
   display: block;
   margin: 60px auto 0 auto;
   width: 350px;
+  border-radius: 0;
 }
 
 /* Right text column */
