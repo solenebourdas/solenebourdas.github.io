@@ -299,14 +299,18 @@ footer {
   }
 }
 
-.cv-container {
-  max-width: 100%;   /* full width of screen */
-  margin: 0;         /* remove auto centering */
-  padding: 0;        /* remove side padding */
+/* Make iframe fill the full viewport width */
+.pdf-full {
+  width: 100vw;       /* viewport width = full page width */
+  height: 90vh;       /* almost full screen height */
+  border: none;       /* remove default border */
+  display: block;     /* remove inline spacing */
+  margin: 0;          /* remove any default margin */
+  padding: 0;         /* remove any default padding */
 }
 
-.pdf-wrapper iframe {
-  width: 100%;       /* fills container */
-  height: 50vh;      /* almost full screen height */
-  border: none;
+/* Optional: remove body padding/margin for this page */
+body {
+  margin: 0;
+  padding: 0;
 }
