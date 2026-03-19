@@ -134,8 +134,8 @@ a:hover {
 
 .profile-img-bottom {
   display: block;
-  margin: 40px auto;   /* centers it horizontally */
-  width: 300px;        /* bigger image */
+  margin: 60px auto 0 auto;
+  width: 350px;
 }
 
 /* Right text column */
