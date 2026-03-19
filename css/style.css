@@ -132,8 +132,10 @@ a:hover {
   width: 180px;
 }
 
-.profile-img.large {
-  width: 300px;                /* Same width for alignment */
+.profile-img-bottom {
+  display: block;
+  margin: 40px auto;   /* centers it horizontally */
+  width: 300px;        /* bigger image */
 }
 
 /* Right text column */
