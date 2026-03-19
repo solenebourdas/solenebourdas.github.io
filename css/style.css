@@ -298,3 +298,15 @@ footer {
     align-items: center;
   }
 }
+
+.pdf-wrapper iframe {
+  width: 100%;        /* full width of container */
+  height: 80vh;       /* 80% of screen height */
+  border: none;       /* removes ugly border */
+
+  .cv-container {
+  max-width: 1200px;   /* wider than main */
+  margin: 40px auto;
+  padding: 0 20px;
+}
+}
