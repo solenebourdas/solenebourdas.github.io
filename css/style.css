@@ -72,6 +72,10 @@ p {
   color: #ddd;
 }
 
+.about-text p:first-child {
+  margin-top: 40px;
+}
+
 /* --- Images --- */
 
 /* --- Footer --- */
