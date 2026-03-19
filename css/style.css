@@ -299,18 +299,33 @@ footer {
   }
 }
 
-/* Make iframe fill the full viewport width */
+/* Full-width PDF iframe */
 .pdf-full {
-  width: 100vw;       /* viewport width = full page width */
-  height: 160vh;       /* almost full screen height */
-  border: none;       /* remove default border */
-  display: block;     /* remove inline spacing */
-  margin: 0;          /* remove any default margin */
-  padding: 0;         /* remove any default padding */
-}
-
-/* Optional: remove body padding/margin for this page */
-body {
+  width: 100vw;       /* full viewport width */
+  height: 90vh;       /* almost full viewport height */
+  border: none;
+  display: block;
   margin: 0;
   padding: 0;
+}
+
+/* Download button */
+.cv-download {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #e6b800;
 }
