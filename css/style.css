@@ -85,7 +85,7 @@ p {
 
 /* Adds extra space ONLY before first paragraph */
 .about-text p:first-child {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 
