@@ -239,9 +239,9 @@ img {
 /* Top-left fossil */
 .fossil-ammonite {
   top: 0;
-  right: 0px;
+  right: -100px;
   width: 600px;
-  height: 400px;
+  height: 450px;
   background-image: url("../Drawings/Ammonite2.png");
 }
 
@@ -250,7 +250,7 @@ img {
   bottom: 0px;
   left: 0;
   width: 600px;
-  height: 400px;
+  height: 350px;
   background-image: url("../Drawings/Nautilus2.png");
 }
 
