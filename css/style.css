@@ -85,7 +85,7 @@ p {
 
 /* Adds extra space ONLY before first paragraph */
 .about-text p:first-child {
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 
@@ -133,7 +133,7 @@ a:hover {
 }
 
 .profile-img.large {
-  width: 180px;                /* Same width for alignment */
+  width: 300px;                /* Same width for alignment */
 }
 
 /* Right text column */
