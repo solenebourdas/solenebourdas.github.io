@@ -239,7 +239,7 @@ img {
 /* Top-left fossil */
 .fossil-ammonite {
   top: 0;
-  right: 0px;
+  right: -20px;
   width: 600px;
   height: 450px;
   background-image: url("../Drawings/Ammonite2.png");
