@@ -312,9 +312,11 @@ footer {
 /* The iframe itself */
 .pdf-wrapper iframe {
   width: 80%;
-  height: calc(100vh - 140px);  /* almost full screen */
+  height: calc(100vh - 140px);
   border: none;
   display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);  /* subtle depth */
 }
 
 
