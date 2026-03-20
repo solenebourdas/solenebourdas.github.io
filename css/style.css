@@ -325,7 +325,7 @@ footer {
   width: 100%;
   max-width: none;     /* removes the 900px limit */
   margin: 40px auto;
-  padding: 0 40px;     /* 👈 THIS adds left/right spacing */
+  padding: 0 80px;     /* 👈 THIS adds left/right spacing */
 }
 
 .cv-download {
