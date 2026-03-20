@@ -311,7 +311,7 @@ footer {
 
 /* The iframe itself */
 .pdf-wrapper iframe {
-  width: 100%;
+  width: 80%;
   height: calc(100vh - 140px);  /* almost full screen */
   border: none;
   display: block;
@@ -322,6 +322,6 @@ footer {
   flex: 1;
   width: 100%;
   max-width: none;     /* removes the 900px limit */
-  margin: 0;
+  margin: 40px auto;
   padding: 0;
 }
