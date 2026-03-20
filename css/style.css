@@ -312,6 +312,7 @@ footer {
 /* PDF wrapper */
 .pdf-wrapper {
   width: 100%;
+  margin-top: 20px;
 }
 
 /* The iframe itself */
