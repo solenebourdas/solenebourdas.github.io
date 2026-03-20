@@ -357,7 +357,7 @@ footer {
 
 /* BIG main image */
 .project-hero {
-  display: block;
+  display: flex;
   width: 70%;
   margin-bottom: 10px;
   border-radius: 0;
