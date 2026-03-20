@@ -333,5 +333,7 @@ footer {
 }
 
 .cv-intro {
-  margin-left: 40px;   /* 🔥 increase/decrease as you like */
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
