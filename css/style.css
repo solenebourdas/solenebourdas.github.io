@@ -383,7 +383,7 @@ footer {
 }
 
 .project-gallery img {
-  width: 80%;
+  width: 50%;
   display: block;        /* 🔥 important */
   margin: 15px auto 20px auto;  /* 🔥 centers it */
   border-radius: 0;
