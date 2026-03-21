@@ -460,9 +460,7 @@ footer {
 
 .hand-note {
   margin-top: 10px;
-  font-family: 'Patrick Hand', cursive;
-  font-size: 16px;
-  color: #ddd;
-   align-self: flex-end;
-  /* subtle handwritten feel */
+  font-style: italic;   /* 👈 this does the job */
+  font-size: 0.95em;    /* optional: slightly smaller */
+  color: #ccc;          /* optional: softer than main text */
 }
