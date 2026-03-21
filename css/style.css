@@ -383,10 +383,12 @@ footer {
 }
 
 .project-gallery img {
-  height: 400px;  
-  display: flex;        /* 🔥 important */
-  margin: 15px auto 20px auto;  /* 🔥 centers it */
+  width: 100%;           /* image fills its container */
+  height: 400px;         /* fixed height for alignment */
+  object-fit: cover;     /* 🔥 scales & crops to fill without distortion */
   border-radius: 0;
+  display: block;        /* removes inline spacing issues */
+  margin: 0 auto;        /* centers in container */
 }
 
 .method-layout {
@@ -400,7 +402,7 @@ footer {
 }
 
 .method-image {
-  width: 350px;       /* adjust size */
+  width: 300px;       /* adjust size */
   height: auto;
   border-radius: 0;
 }
