@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research - Solène Bourdas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+  <!-- Header / Menu -->
+<header>
+  <h1>Solène Bourdas</h1>
+  <nav>
+    <a href="index.html">About me</a> 
+    <a href="Research.html">Research</a> 
+    <a href="CV.html">CV</a> 
+    <a href="Publications.html">Publications</a> 
+    <a href="Communication.html">Communication</a>
+    <a href="Gallery.html">Gallery</a> 
+  </nav>
+</header>
+
+  <!-- Main Content -->
+ <main class="project-page">
+
+   <a href="Research.html" class="back-link">← Back to Research</a>
+   
+  <h2 class="project-title">
+   Microtomographic study of Olenelloid trilobite guts 
+  </h2>
+
+  <p class="project-meta">
+    Supervised by Javier Ortega-Hernández and Rudy Lerosey-Aubril · Havard University · 2024
+  </p>
+
+  <img src="Images/project1-4.jpg" class="project-hero">
+
+  <section class="project-section">
+    <h3>Overview</h3>
+    <p>This project aimed to investigate internal anatomical structures in exceptionally preserved trilobite specimens from the Lower Cambrian of Canada (Rosella Formation). 
+      These specimens exhibit rare soft-tissue preservation, including digestive structures, offering an unique opportunity to study early arthropod internal anatomy.
+      The aim was to apply non-destructive CT imaging to reconstruct and describe gut morphology in three dimensions. </p>
+  </section>
+   
+<section class="project-section">
+     
+ <div class="method-layout">
+ 
+    <div class="method-text">
+      <h3>Methods</h3>
+      <p>
+       Specimens were first screened using radiography, then scanned with high-resolution CT. 
+      Volumetric datasets were processed in ImageJ, and segmentation of low-contrast gut structures was performed using Dragonfly and ParaView. 
+        Three-dimensional reconstructions were refined in Blender, and figures and animations were produced for dissemination.
+      </p>
+        <p class="hand-note"> 
+          Example of shell bed virtual slice ⬏
+    </p>
+    </div>
+
+    <img src="Images/project1-7.png" class="method-image">
+
+  </div>
+  </section>
+
+  <section class="project-section">
+   <div class="result-layout">
+    
+    <div class="result-text">
+     <h3>Results</h3>
+    <p>Gut structures were reconstructed in 25 specimens, allowing a comprehensive anatomical description. 
+      The digestive system includes a differentiated anterior crop and a simple posterior tract. 
+      In one specimen, preserved gut contents interpreted as a phosphatocopina arthropod provided rare direct evidence of trophic interactions.
+      These findings inform feeding strategies and early trophic network evolution. 
+      </p>
+        <p class="hand-note2"> 
+         ⬐ Results were presented as a poster at a student scientific conference (click on it to view)
+    </p>
+    </div>
+
+     
+ </div>
+</section>
+    
+<section class="project-gallery">
+ <div class="project-gallery-item">
+  <img src="Images/project1-6.jpg" class="clickable-img" onclick="openImage(this.src)">
+</div>
+  <div class="project-gallery-item">
+    <img src="Images/project1-1.jpg" alt="Project 1 image">
+     <p class="image-caption">The beautiful Pinhay Bay</p>
+  </div>
+</section>
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Solène Bourdas</p>
+  </footer>
+
+
+<div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img" onclick="event.stopPropagation()">
+</div>
+
+<script>
+function openImage(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeImage() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+  
+</body>
+</html>
