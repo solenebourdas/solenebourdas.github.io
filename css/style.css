@@ -382,9 +382,7 @@ footer {
 }
 
 .project-gallery-item {            /* fixed height for all items */
-  display: flex;
-  justify-content: center;    /* horizontally center image */
-  align-items: center;        /* vertically center image */
+  display: flex;      
   background-color: #000;     /* optional background */
   overflow: hidden;           /* hide anything outside container */
   border-radius: 0;
