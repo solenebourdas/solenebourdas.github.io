@@ -455,3 +455,19 @@ footer {
     flex-direction: column;
   }
 }
+
+.method-image-wrapper {
+  position: relative;   /* IMPORTANT: allows absolute positioning */
+}
+
+.hand-note {
+  position: absolute;
+  top: -20px;           /* adjust position */
+  right: -10px;
+
+  font-family: 'Patrick Hand', cursive;
+  font-size: 16px;
+  color: #ffcc00;
+
+  transform: rotate(-5deg);  /* slight tilt = handwritten feel */
+}
