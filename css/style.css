@@ -382,12 +382,25 @@ footer {
   gap: 15px;
 }
 
-.project-gallery img {
-  width: 100%;          /* fills the grid column */
-  height: auto;         /* keeps original aspect ratio */
-  display: block;
-  margin: 0 auto 20px auto;
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.project-gallery-item {
+  height: 400px;             /* fixed height for all items */
+  overflow: hidden;           /* hides excess parts of tall images */
+  display: flex;
+  justify-content: center;    /* horizontally center image */
+  align-items: center;        /* vertically center image */
   border-radius: 0;
+  background-color: #000;     /* optional: matches page bg */
+}
+
+.project-gallery-item img {
+  max-height: 100%;           /* image will not exceed container height */
+  width: auto;                /* keeps aspect ratio */
 }
 
 .method-layout {
