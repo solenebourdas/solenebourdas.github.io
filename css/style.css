@@ -431,4 +431,18 @@ footer {
   max-height: 90%;
 }
 
+.result-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
 
+.result-text {
+  flex: 1;
+}
+
+.result-image {
+  width: 300px;       /* adjust size */
+  height: auto;
+  border-radius: 0;
+}
