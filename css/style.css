@@ -383,12 +383,11 @@ footer {
 }
 
 .project-gallery img {
-  width: 100%;           /* image fills its container */
-  height: 400px;         /* fixed height for alignment */
-  object-fit: cover;     /* 🔥 scales & crops to fill without distortion */
+  width: 100%;          /* fills the grid column */
+  height: auto;         /* keeps original aspect ratio */
+  display: block;
+  margin: 0 auto 20px auto;
   border-radius: 0;
-  display: block;        /* removes inline spacing issues */
-  margin: 0 auto;        /* centers in container */
 }
 
 .method-layout {
