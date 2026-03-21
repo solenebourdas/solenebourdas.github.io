@@ -459,7 +459,7 @@ footer {
 }
 
 .hand-note {
-  margin-top: auto;        /* 👈 pushes it to the bottom */
+  margin-top: 50px;        /* 👈 pushes it to the bottom */
   align-self: flex-end;
   font-style: italic;   /* 👈 this does the job */
   font-size: 0.95em;    /* optional: slightly smaller */
