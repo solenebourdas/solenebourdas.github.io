@@ -393,6 +393,7 @@ footer {
   display: flex;
   gap: 30px;
   align-items: flex-start;
+  flex-direction: row-reverse;
 }
 
 .method-text {
@@ -440,8 +441,7 @@ footer {
 .result-layout {
   display: flex;
   gap: 30px;
-  align-items: flex-start;
-  flex-direction: row-reverse;   /* 🔥 THIS flips image to the left */
+  align-items: flex-start;   /* 🔥 THIS flips image to the left */
 }
 
 .result-text {
