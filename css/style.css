@@ -445,7 +445,7 @@ footer {
 .result-layout {
   display: flex;
   gap: 30px;
-  margin-top: -30px;  
+  margin-top: -40px;  
   align-items: flex-start;   /* 🔥 THIS flips image to the left */
 }
 
