@@ -338,6 +338,9 @@ footer {
   margin-bottom: 20px;
 }
 
+
+/*PROJECT1 */
+
 .project-page {
   max-width: 1000px;
   margin: 30px auto;
@@ -404,10 +407,8 @@ footer {
 
 .clickable-img {
   cursor: pointer;
-  display: block;
-  margin: 20px auto;   /* centers it */
   max-width: 600px;
-  width: 150px;       /* adjust size */
+  width: 150px;
   height: auto;
   border-radius: 0;
 }
@@ -440,10 +441,15 @@ footer {
   display: flex;
   gap: 30px;
   align-items: flex-start;
+  flex-direction: row-reverse;   /* 🔥 THIS flips image to the left */
 }
 
 .result-text {
   flex: 1;
 }
 
-
+@media (max-width: 600px) {
+  .result-layout {
+    flex-direction: column;
+  }
+}
