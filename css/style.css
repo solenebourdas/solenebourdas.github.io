@@ -378,7 +378,7 @@ footer {
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  gap: 5px;
+  gap: 15px;
 }
 
 .project-gallery-item {            /* fixed height for all items */
@@ -389,7 +389,7 @@ footer {
 }
 
 .project-gallery-item img {
-  max-height: 400px;  /* maximum height */
+  max-height: 350px;  /* maximum height */
   width: auto;         /* width adjusts naturally */
   display: block;
   border-radius: 0;
