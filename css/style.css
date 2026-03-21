@@ -412,16 +412,12 @@ footer {
   border-radius: 0;
 }
 
-.clickable-img {
-  cursor: pointer;
-  max-width: 600px;
-  width: 250px;
-  height: auto;
-  border-radius: 0;
-}
 
 .clickable-img:hover {
   opacity: 0.85;
+}
+.clickable-img {
+  cursor: pointer;
 }
 
 /* Lightbox background */
