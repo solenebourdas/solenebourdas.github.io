@@ -456,17 +456,12 @@ footer {
   }
 }
 
-.method-image-wrapper {
-  position: relative;   /* IMPORTANT: allows absolute positioning */
-}
+
 
 .hand-note {
-  position: absolute;
-  top: 300px;           /* adjust position */
-  right: -400px;
-
+  margin-top: 10px;
   font-family: 'Patrick Hand', cursive;
   font-size: 16px;
-  color: #ddd;
- /* slight tilt = handwritten feel */
+  color: #ffcc00;
+  /* subtle handwritten feel */
 }
