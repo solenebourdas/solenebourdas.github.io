@@ -372,7 +372,7 @@ footer {
 
 .project-section h3 {
   color: #ffcc00;
-  margin-bottom: 5px;
+  margin-bottom: -10px;
 }
 
 .project-gallery {
@@ -400,6 +400,7 @@ footer {
   display: flex;
   gap: 30px;
   align-items: flex-start;
+  margin-top: 20px; 
 }
 
 .method-text {
@@ -462,7 +463,7 @@ footer {
 .hand-note {
   margin-top: 50px;
   align-self: flex-end;
-  transform: translateX(50px);  /* 👈 pushes it further right */
+  transform: translateX(60px);  /* 👈 pushes it further right */
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
