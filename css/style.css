@@ -385,7 +385,7 @@ footer {
 .project-gallery img {
   width: 80%;
   display: block;        /* 🔥 important */
-  margin: 0 auto 20px auto;  /* 🔥 centers it */
+  margin: 15px auto 20px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
 
