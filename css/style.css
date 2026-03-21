@@ -377,6 +377,7 @@ footer {
 
 .project-gallery {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   gap: 5px;
 }
 
@@ -391,6 +392,7 @@ footer {
   max-height: 400px;  /* maximum height */
   width: auto;         /* width adjusts naturally */
   display: block;
+  border-radius: 0;
 }
 
 .method-layout {
