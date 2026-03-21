@@ -445,7 +445,7 @@ footer {
 .result-layout {
   display: flex;
   gap: 30px;
-  padding: -20px;
+  margin-top: -30px;  
   align-items: flex-start;   /* 🔥 THIS flips image to the left */
 }
 
@@ -462,7 +462,7 @@ footer {
 .hand-note {
   margin-top: 50px;
   align-self: flex-end;
-  transform: translateX(10px);  /* 👈 pushes it further right */
+  transform: translateX(30px);  /* 👈 pushes it further right */
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
