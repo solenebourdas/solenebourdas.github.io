@@ -462,12 +462,11 @@ footer {
 
 .hand-note {
   position: absolute;
-  top: -20px;           /* adjust position */
-  right: -10px;
+  top: 30px;           /* adjust position */
+  right: -50px;
 
   font-family: 'Patrick Hand', cursive;
   font-size: 16px;
   color: #ffcc00;
-
-  transform: rotate(-5deg);  /* slight tilt = handwritten feel */
+ /* slight tilt = handwritten feel */
 }
