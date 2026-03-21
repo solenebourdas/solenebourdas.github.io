@@ -382,13 +382,19 @@ footer {
 }
 
 .project-gallery-item {
-  height: 400px;             /* fixed height */
+  height: 400px;             /* fixed height for all items */
   display: flex;
-  justify-content: center;    /* horizontally center */
-  align-items: center;        /* vertically center */
-  background-color: #000;     /* optional */
-  overflow: hidden;           /* hides if width exceeds container */
+  justify-content: center;    /* horizontally center image */
+  align-items: center;        /* vertically center image */
+  background-color: #000;     /* optional background */
+  overflow: hidden;           /* hide anything outside container */
   border-radius: 0;
+}
+
+.project-gallery-item img {
+  height: 100%;   /* forces all images to same height */
+  width: auto;    /* width adjusts to keep aspect ratio */
+  object-fit: contain;  /* keeps full image visible */
 }
 
 .method-layout {
