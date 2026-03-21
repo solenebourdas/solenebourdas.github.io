@@ -405,6 +405,9 @@ footer {
   display: block;
   margin: 20px auto;   /* centers it */
   max-width: 600px;
+  width: 300px;       /* adjust size */
+  height: auto;
+  border-radius: 0;
 }
 
 .clickable-img:hover {
@@ -441,8 +444,4 @@ footer {
   flex: 1;
 }
 
-.result-image {
-  width: 300px;       /* adjust size */
-  height: auto;
-  border-radius: 0;
-}
+
