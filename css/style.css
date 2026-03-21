@@ -382,10 +382,12 @@ footer {
   margin-top: -30px;
 }
 
-.project-gallery-item {            /* fixed height for all items */
-  display: flex;      
-  background-color: #000;     /* optional background */
-  overflow: hidden;           /* hide anything outside container */
+.project-gallery-item {
+  display: flex;
+  flex-direction: column;  /* stack image + caption vertically */
+  align-items: center;     /* center horizontally */
+  background-color: #000;  /* optional */
+  overflow: hidden;        /* hides overflow only if needed */
   border-radius: 0;
 }
 
@@ -395,6 +397,15 @@ footer {
   display: block;
   border-radius: 0;
 }
+
+.image-caption {
+  margin-top: 5px;          /* space between image and caption */
+  font-style: italic;
+  font-size: 0.95em;
+  color: #ccc;
+  text-align: center;
+}
+
 
 .method-layout {
   display: flex;
@@ -478,10 +489,3 @@ footer {
   color: #ccc;
 }
 
-.image-caption {
-  margin-top: 5px;          /* space between image and caption */
-  font-style: italic;
-  font-size: 0.95em;
-  color: #ccc;
-  text-align: center;
-}
