@@ -379,7 +379,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   gap: 25px;
-  margin-top: 80px;
+  margin-top: 150px;
 }
 
 .project-gallery-item {            /* fixed height for all items */
