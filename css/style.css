@@ -381,8 +381,7 @@ footer {
   gap: 5px;
 }
 
-.project-gallery-item {
-  height: 400px;             /* fixed height for all items */
+.project-gallery-item {            /* fixed height for all items */
   display: flex;
   justify-content: center;    /* horizontally center image */
   align-items: center;        /* vertically center image */
@@ -392,8 +391,8 @@ footer {
 }
 
 .project-gallery-item img {
-  height: 100%;   /* fills container height */
-  width: auto;    /* width adjusts to maintain aspect ratio */
+  max-height: 400px;  /* maximum height */
+  width: auto;         /* width adjusts naturally */
   display: block;
 }
 
