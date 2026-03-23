@@ -539,6 +539,13 @@ footer {
   border-radius: 0;
 }
 
+.project-gallery-item3 img {
+  max-height: 200px;  /* maximum height */
+  width: auto;         /* width adjusts naturally */
+  display: block;
+  border-radius: 0;
+}
+
 .method-layout2 {
   display: flex;
   gap: 0px;
