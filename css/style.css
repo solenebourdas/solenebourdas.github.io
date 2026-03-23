@@ -502,3 +502,12 @@ footer {
   height: auto;
   display: block;
 }
+
+.image-caption a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.image-caption a:hover {
+  text-decoration: underline;
+}
