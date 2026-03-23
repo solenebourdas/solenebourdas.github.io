@@ -511,3 +511,26 @@ footer {
 .image-caption a:hover {
   text-decoration: underline;
 }
+
+.project-gallery2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 25px;
+  margin-top: -30px;
+}
+
+.project-gallery-item2 {
+  display: flex;
+  flex-direction: column;  /* stack image + caption vertically */
+  align-items: center;     /* center horizontally */
+  background-color: #000;  /* optional */
+  overflow: hidden;        /* hides overflow only if needed */
+  border-radius: 0;
+}
+
+.project-gallery-item2 img {
+  max-height: 300px;  /* maximum height */
+  width: auto;         /* width adjusts naturally */
+  display: block;
+  border-radius: 0;
+}
