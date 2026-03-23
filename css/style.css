@@ -489,3 +489,10 @@ footer {
   color: #ccc;
 }
 
+/* BIG main image */
+.project-hero2 {
+  width: 60%;
+  display: block;        /* 🔥 important */
+  margin: 0 auto 20px auto;  /* 🔥 centers it */
+  border-radius: 0;
+}
