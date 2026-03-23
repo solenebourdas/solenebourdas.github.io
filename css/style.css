@@ -520,7 +520,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   gap: 25px;
-  margin-top: 0px;
+  margin-top: 30px;
 }
 
 .project-gallery-item2 {
@@ -543,5 +543,5 @@ footer {
   display: flex;
   gap: 0px;
   align-items: flex-start;
-  margin-top: 0px; 
+  margin-top: -30px; 
 }
