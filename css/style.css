@@ -491,8 +491,14 @@ footer {
 
 /* BIG main image */
 .project-hero2 {
-  width: 60%;
+  width: 70%;
   display: block;        /* 🔥 important */
   margin: 0 auto 20px auto;  /* 🔥 centers it */
   border-radius: 0;
+}
+
+.project-video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
