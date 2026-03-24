@@ -572,3 +572,12 @@ footer {
 .project-hero3 img {
   border-radius: 0;
 }
+
+.hand-note4 {
+  padding: 60px;
+  margin-top: 30px;
+  align-self: flex-end;
+  font-style: italic;
+  font-size: 0.95em;
+  color: #ccc;
+}
