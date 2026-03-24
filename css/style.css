@@ -577,7 +577,7 @@ footer {
 .hand-note4 {
   margin-top: 30px;
   align-self: flex-end;
-  transform: translateX(-150px);  /* 👈 pushes it further right */
+  transform: translateX(-300px);  /* 👈 pushes it further right */
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
