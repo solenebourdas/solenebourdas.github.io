@@ -538,7 +538,7 @@ footer {
   width: auto;         /* width adjusts naturally */
   display: block;
   border-radius: 0;
-  box-shadow: 1px 1px 1px 1px #888;
+   border: 1px solid #888;
 }
 
 .project-gallery-item3 img {
