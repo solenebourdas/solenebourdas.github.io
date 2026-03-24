@@ -519,7 +519,7 @@ footer {
 
 .project-gallery2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(450px, auto));
   gap: 35px;
   margin-top: 0px;
 }
@@ -534,12 +534,13 @@ footer {
 }
 
 .project-gallery-item2 video {
-  display: block;          /* make it a block element */
-  max-height: 400px;       /* limit height */
-  width: auto;             /* preserve aspect ratio */
-  border: 1px solid #888;  /* full border */
-  background-color: #000;  /* ensures black background behind edges */
-  box-sizing: border-box;  /* include border in element dimensions */
+  display: block;          
+  max-height: 450px;       /* limit height */
+  width: 100%;             /* fill container width */
+  object-fit: contain;     /* preserve aspect ratio, no cropping */
+  border: 1px solid #888;  
+  background-color: #000;  
+  box-sizing: border-box;  
 }
 
 .project-gallery-item3 img {
@@ -568,13 +569,16 @@ footer {
 
 .project-hero3 {
   width: 70%;
-  display: block;        /* 🔥 important */
+  display: block;        /* ensures it's block-level */
+  margin: -10px auto 40px auto; /* top -10px, left/right auto = centers it, bottom 5px */
   border-radius: 0;
-   margin-top:-10px;
 }
 
 .project-hero3 img {
+  display: block;        /* removes inline spacing under image */
   border-radius: 0;
+  width: 100%;           /* fills container width while keeping aspect ratio */
+  height: auto;
 }
 
 .hand-note4 {
