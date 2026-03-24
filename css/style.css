@@ -534,7 +534,7 @@ footer {
 }
 
 .project-gallery-item2 img {
-  max-height: 350px;  /* maximum height */
+  max-height: 400px;  /* maximum height */
   width: auto;         /* width adjusts naturally */
   display: block;
   border-radius: 0;
@@ -586,12 +586,13 @@ footer {
 }
 
 .hand-note5 {
-  padding: 30px;
+  padding: 60px;
   margin-top: 50px;
   align-self: flex-end;
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
+  text-align: center;
 }
 
 .hand-note6 {
