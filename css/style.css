@@ -534,7 +534,7 @@ footer {
 
 /* Video styling */
 .project-gallery-item2 video {
-  width: 400px;           /* fixed width */
+  width: 700px;           /* fixed width */
   height: auto;           /* preserve aspect ratio */
   display: block;
   border: 1px solid #888; /* full border */
@@ -549,6 +549,7 @@ footer {
   display: block;
   border-radius: 0;        /* no border */
 }
+
 .method-layout2 {
   display: flex;
   gap: 0px;
