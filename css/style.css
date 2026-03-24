@@ -555,9 +555,9 @@ footer {
 }
 
 .hand-note3 {
-  margin-top: 50px;
+  margin-top: 70px;
   align-self: flex-end;
-  transform: translateX(50px);  /* 👈 pushes it further right */
+  transform: translateX(40px);  /* 👈 pushes it further right */
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
@@ -566,7 +566,7 @@ footer {
 .project-hero3 {
   width: 70%;
   display: block;        /* 🔥 important */
-  margin: 10px auto 20px auto;  /* 🔥 centers it */
+  margin: 0px auto 20px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
 
@@ -577,7 +577,7 @@ footer {
 .hand-note4 {
   margin-top: 30px;
   align-self: flex-end;
-  transform: translateX(30px);  /* 👈 pushes it further right */
+  transform: translateX(-50px);  /* 👈 pushes it further right */
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
