@@ -525,7 +525,7 @@ footer {
 }
 
 .project-gallery-item2 video {
-  max-width: 100%;        /* don’t overflow container */
+  max-width: 50%;        /* don’t overflow container */
   height: auto;           /* maintain natural aspect ratio */
   display: block;
   border: 1px solid #888; /* only the video has a border */
@@ -533,7 +533,7 @@ footer {
 }
 
 .project-gallery-item3 img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   display: block;
   border-radius: 0;       /* no border here */
@@ -619,5 +619,5 @@ footer {
   font-size: 0.95em;
   color: #ccc;
   text-align: center;
-  transform: translateY(-40px);
+  transform: translateY(-60px);
 }
