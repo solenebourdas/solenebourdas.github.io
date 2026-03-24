@@ -518,25 +518,23 @@ footer {
 }
 .project-gallery2 {
   display: flex;          /* put items next to each other */
-  flex-wrap: wrap;        /* allow items to go to next line if needed */
   gap: 25px;              /* space between items */
   justify-content: center; /* center the whole row */
+  align-items: flex-start; /* align top edges */
   margin-top: 0px;
 }
 
 .project-gallery-item2 video {
-  max-width: 50%;        /* don’t overflow container */
-  height: auto;           /* maintain natural aspect ratio */
+  height: auto;           /* natural height */
   display: block;
   border: 1px solid #888; /* only the video has a border */
   border-radius: 0;
 }
 
 .project-gallery-item3 img {
-  max-width: 30%;
-  height: auto;
+  height: auto;           /* natural height */
   display: block;
-  border-radius: 0;       /* no border here */
+  border-radius: 0;       /* no border */
 }
 
 .method-layout2 {
@@ -619,5 +617,5 @@ footer {
   font-size: 0.95em;
   color: #ccc;
   text-align: center;
-  transform: translateY(-60px);
+  transform: translateY(-50px);
 }
