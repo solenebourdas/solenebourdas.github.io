@@ -538,7 +538,7 @@ footer {
   width: auto;         /* width adjusts naturally */
   display: block;
   border-radius: 0;
-  box-shadow: 0 0 0 1px #888;
+  box-shadow: 1px 1px 1px 1px #888;
 }
 
 .project-gallery-item3 img {
@@ -552,8 +552,8 @@ footer {
   display: flex;
   gap: 0px;
   align-items: flex-start;
-  margin-top: -60px; 
-  margin-bottom: 60px;
+  margin-top: -50px; 
+  margin-bottom: 30px;
 }
 
 .hand-note3 {
@@ -568,7 +568,7 @@ footer {
 .project-hero3 {
   width: 70%;
   display: block;        /* 🔥 important */
-  margin: 0px auto 70px auto;  /* 🔥 centers it */
+  margin: 0px auto 5px auto;  /* 🔥 centers it */
   border-radius: 0;
    margin-top:-10px;
 }
@@ -594,6 +594,7 @@ footer {
   font-size: 0.95em;
   color: #ccc;
   text-align: center;
+  transform: translateX(-60px);
 }
 
 .hand-note6 {
@@ -604,6 +605,7 @@ footer {
   font-size: 0.95em;
   color: #ccc;
   text-align: center;
+  transform: translateY(-10px);
 }
 
 .method-image2 {
