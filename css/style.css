@@ -522,7 +522,7 @@ footer {
   gap: 25px;              /* space between items */
   justify-content: center; /* center the row */
   align-items: flex-start; /* align top edges */
-  margin-top: 0px;
+  margin-top: 7px;
 }
 
 .project-gallery-item2,
