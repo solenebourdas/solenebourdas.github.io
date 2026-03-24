@@ -602,3 +602,9 @@ footer {
   font-size: 0.95em;
   color: #ccc;
 }
+
+.method-image2 {
+  width: 300px;       /* adjust size */
+  height: auto;
+  border-radius: 0;
+}
