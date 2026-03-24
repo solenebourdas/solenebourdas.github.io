@@ -533,7 +533,7 @@ footer {
 }
 
 .project-gallery-item3 img {
-  max-width: 50%;
+  max-width: 30%;
   height: auto;
   display: block;
   border-radius: 0;       /* no border here */
@@ -559,7 +559,7 @@ footer {
 .project-hero3 {
   width: 70%;
   display: block;        /* ensures it's block-level */
-  margin: -10px auto 40px auto; /* top -10px, left/right auto = centers it, bottom 5px */
+  margin: -10px auto 30px auto; /* top -10px, left/right auto = centers it, bottom 5px */
   border-radius: 0;
 }
 
