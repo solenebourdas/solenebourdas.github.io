@@ -587,7 +587,7 @@ footer {
 }
 
 .hand-note5 {
-  padding: 60px;
+  padding: 0px;
   margin-top: 50px;
   align-self: flex-end;
   font-style: italic;
@@ -598,7 +598,7 @@ footer {
 
 .hand-note6 {
   padding: 65px;
-  margin-top: 0px;
+  margin-top: -20px;
   align-self: flex-end;
   font-style: italic;
   font-size: 0.95em;
