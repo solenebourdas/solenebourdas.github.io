@@ -555,13 +555,13 @@ footer {
 }
 
 .hand-note3 {
-  padding: 60px;
+  padding: 0px;
   margin-top: 65px;
   align-self: flex-end;
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
-  margin-left: 30px;
+  margin-left: 70px;
 }
 
 .project-hero3 {
