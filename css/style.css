@@ -534,11 +534,12 @@ footer {
 }
 
 .project-gallery-item2 video {
-  max-height: 400px;  /* maximum height */
-  width: auto;         /* width adjusts naturally */
-  display: block;
-  border-radius: 0;
-   border: 1px solid #888;
+  display: block;          /* make it a block element */
+  max-height: 400px;       /* limit height */
+  width: auto;             /* preserve aspect ratio */
+  border: 1px solid #888;  /* full border */
+  background-color: #000;  /* ensures black background behind edges */
+  box-sizing: border-box;  /* include border in element dimensions */
 }
 
 .project-gallery-item3 img {
@@ -568,13 +569,12 @@ footer {
 .project-hero3 {
   width: 70%;
   display: block;        /* 🔥 important */
-  margin: 0px auto 0px auto;  /* 🔥 centers it */
   border-radius: 0;
    margin-top:-10px;
-  margin-bottom:40px;
 }
 
 .project-hero3 img {
+  display: block;
   border-radius: 0;
 }
 
