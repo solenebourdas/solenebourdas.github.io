@@ -481,7 +481,7 @@ footer {
 }
 
 .hand-note2 {
-  padding: 20px;
+  padding: 30px;
   margin-top: 30px;
   align-self: flex-end;
   font-style: italic;
@@ -520,7 +520,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   gap: 25px;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .project-gallery-item2 {
@@ -554,7 +554,7 @@ footer {
 }
 
 .hand-note3 {
-  padding: 40px;
+  padding: 60px;
   margin-top: 65px;
   align-self: flex-end;
   font-style: italic;
