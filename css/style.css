@@ -533,7 +533,7 @@ footer {
   border-radius: 0;
 }
 
-.project-gallery-item2 img {
+.project-gallery-item2 video {
   max-height: 400px;  /* maximum height */
   width: auto;         /* width adjusts naturally */
   display: block;
