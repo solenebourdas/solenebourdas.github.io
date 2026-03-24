@@ -516,38 +516,27 @@ footer {
 .image-caption a:hover {
   text-decoration: underline;
 }
-
 .project-gallery2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, auto));
-  gap: 35px;
+  display: flex;          /* put items next to each other */
+  flex-wrap: wrap;        /* allow items to go to next line if needed */
+  gap: 25px;              /* space between items */
+  justify-content: center; /* center the whole row */
   margin-top: 0px;
 }
 
-.project-gallery-item2 {
-  display: flex;
-  flex-direction: column;  /* stack image + caption vertically */
-  align-items: center;     /* center horizontally */
-  background-color: #000;  /* optional */
-  overflow: hidden;        /* hides overflow only if needed */
-  border-radius: 0;
-}
-
 .project-gallery-item2 video {
-  display: block;          
-  max-height: 450px;       /* limit height */
-  width: 100%;             /* fill container width */
-  object-fit: contain;     /* preserve aspect ratio, no cropping */
-  border: 1px solid #888;  
-  background-color: #000;  
-  box-sizing: border-box;  
+  max-width: 100%;        /* don’t overflow container */
+  height: auto;           /* maintain natural aspect ratio */
+  display: block;
+  border: 1px solid #888; /* only the video has a border */
+  border-radius: 0;
 }
 
 .project-gallery-item3 img {
-  max-height: 250px;  /* maximum height */
-  width: auto;         /* width adjusts naturally */
+  max-width: 100%;
+  height: auto;
   display: block;
-  border-radius: 0;
+  border-radius: 0;       /* no border here */
 }
 
 .method-layout2 {
@@ -622,4 +611,13 @@ footer {
   display: block;
   gap: 30px;
   margin-top: -40px;  
+}
+
+.image-caption2 {
+  margin-top: 5px;          /* space between image and caption */
+  font-style: italic;
+  font-size: 0.95em;
+  color: #ccc;
+  text-align: center;
+  transform: translateY(-40px);
 }
