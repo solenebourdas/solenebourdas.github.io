@@ -516,27 +516,39 @@ footer {
 .image-caption a:hover {
   text-decoration: underline;
 }
+
 .project-gallery2 {
-  display: flex;          /* put items next to each other */
+  display: flex;
   gap: 25px;              /* space between items */
-  justify-content: center; /* center the whole row */
+  justify-content: center; /* center the row */
   align-items: flex-start; /* align top edges */
   margin-top: 0px;
 }
 
+.project-gallery-item2,
+.project-gallery-item3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Video styling */
 .project-gallery-item2 video {
-  height: auto;           /* natural height */
+  width: 400px;           /* fixed width */
+  height: auto;           /* preserve aspect ratio */
   display: block;
-  border: 1px solid #888; /* only the video has a border */
+  border: 1px solid #888; /* full border */
   border-radius: 0;
+  box-sizing: border-box; /* ensures border is included */
 }
 
+/* Image styling */
 .project-gallery-item3 img {
-  height: auto;           /* natural height */
+  width: 300px;            /* fixed width for balance */
+  height: auto;
   display: block;
-  border-radius: 0;       /* no border */
+  border-radius: 0;        /* no border */
 }
-
 .method-layout2 {
   display: flex;
   gap: 0px;
