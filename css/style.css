@@ -495,7 +495,7 @@ footer {
   display: block;        /* 🔥 important */
   margin: 0 auto 20px auto;  /* 🔥 centers it */
   border-radius: 0;
-   margin-top: -30px;
+   margin-top: 30px;
 }
 
 .project-hero2 img {
@@ -555,19 +555,18 @@ footer {
 }
 
 .hand-note3 {
-  padding: 0px;
-  margin-top: 65px;
+  margin-top: 50px;
   align-self: flex-end;
+  transform: translateX(50px);  /* 👈 pushes it further right */
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
-  margin-left: 160px;
 }
 
 .project-hero3 {
   width: 70%;
   display: block;        /* 🔥 important */
-  margin: 35px auto 20px auto;  /* 🔥 centers it */
+  margin: 10px auto 20px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
 
@@ -576,13 +575,12 @@ footer {
 }
 
 .hand-note4 {
-  padding: 10px;
   margin-top: 30px;
   align-self: flex-end;
+  transform: translateX(30px);  /* 👈 pushes it further right */
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
-  margin-left: 50px;
 }
 
 .hand-note5 {
