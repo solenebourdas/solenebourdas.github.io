@@ -685,7 +685,7 @@ footer {
 .project-hero5 {
   width: 90%;
   display: block;
-  margin: 20px auto 0 auto;  /* space below the text */
+  margin: 0px auto 0 auto;  /* space below the text */
   border: 1px solid #ffcc00;
   border-radius: 0;
   box-sizing: border-box;
