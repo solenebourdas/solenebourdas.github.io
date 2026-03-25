@@ -638,7 +638,7 @@ footer {
   display: flex;
   align-items: flex-start;
   gap: 1px;
-  margin-top: 0px;
+  margin-top: -10px;
    margin-bottom: -30px;
 }
 
@@ -678,7 +678,7 @@ footer {
 .project-hero5 {
   width: 90%;
   display: block;        /* 🔥 important */
-  margin: 20px auto 80px auto;  /* 🔥 centers it */
+  margin: 40px auto 80px auto;  /* 🔥 centers it */
   border-radius: 0;
   border: 1px solid #888; /* full border */
   border-radius: 0;
