@@ -655,6 +655,6 @@ footer {
   font-size: 0.95em;
   color: #ccc;
   text-align: center;
-  transform: translateY(-400px);
+  transform: translateY(-800px);
   transform: translateX(-40px);
 }
