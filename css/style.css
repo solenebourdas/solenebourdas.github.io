@@ -683,4 +683,5 @@ footer {
   border: 1px solid #888; /* full border */
   border-radius: 0;
   box-sizing: border-box; 
+  cursor: pointer;
 }
