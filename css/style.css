@@ -658,3 +658,10 @@ footer {
   transform: translateY(-800px);
   transform: translateX(-40px);
 }
+
+.project-hero4 {
+  width: 80%;
+  display: block;        /* 🔥 important */
+  margin: 0 auto 40px auto;  /* 🔥 centers it */
+  border-radius: 0;
+}
