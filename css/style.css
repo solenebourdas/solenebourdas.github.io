@@ -698,32 +698,52 @@ footer {
   margin-bottom: 0px; /* space between note and image */
 }
 
+
+
+
+/* Top row: Image 1 + Results text */
+.result-layout-project3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* image left, text right */
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.result-layout-project3 img {
+  width: 100%;          /* adjust width as needed */
+  border: 1px solid #ffcc00;
+  border-radius: 5px;
+}
+
+/* Bottom row: 2 images side by side */
 .project-gallery3 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns for first row */
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
+  margin-bottom: 60px;
 }
 
-.project-gallery3 .project-gallery-item3:nth-child(3) {
-  grid-column: 1 / -1; /* spans both columns */
-  justify-self: center; /* centers image */
+.project-gallery3 img {
+  width: 100%;
+  border: none;         /* no border for bottom images by default */
+  border-radius: 0;     /* no rounding */
 }
 
-/* Image 1 */
-.item1 img {
-  width: 60%;              /* custom width */ /* custom border color */
-  border-radius: 0px;
+/* Optional text styling */
+.result-layout-project3 h3 {
+  margin-bottom: 10px;
 }
 
-/* Image 2 */
+.result-layout-project3 p {
+  line-height: 1.5;
+}
+
+/* Special styling for Image 2 only */
 .item2 img {
   width: 90%;
-  border-radius: 0px;
-  border: 1px solid #ccc;
-  border-radius: 0px;
-}
-
-/* Image 3 */
-.item3 img {
-  width: 35%;
+  border: 1px solid #ccc;  /* border only for this image */
+  border-radius: 0;         /* no rounding */
+  display: block;
+  margin: 0 auto;           /* centers the image */
 }
