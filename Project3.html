@@ -82,7 +82,22 @@
   </section>
 
 
-<img src="Images/project3-4.jpg" class="project-hero5">
+<img 
+  src="Images/project3-4.jpg" 
+  class="project-hero5"
+  id="remipedeImg"
+>
+   <script>
+const img = document.getElementById("remipedeImg");
+
+img.addEventListener("click", () => {
+  if (img.src.includes("project3-4.jpg")) {
+    img.src = "Images/project3-5.jpg";
+  } else {
+    img.src = "Images/project3-4.jpg";
+  }
+});
+</script>
 
    
 
