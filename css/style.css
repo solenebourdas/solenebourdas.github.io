@@ -638,7 +638,7 @@ footer {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .image-row img {
@@ -648,11 +648,11 @@ footer {
 }
 
 .image-note {
-  max-width: 250px;
+  max-width: 300px;
   align-self: flex-end;
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
   text-align: center;
-  transform: translateY(50px);
+  transform: translateY(-80px);
 }
