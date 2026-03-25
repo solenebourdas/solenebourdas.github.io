@@ -676,7 +676,7 @@ footer {
 }
 
 .project-hero5 {
-  width: 90%;
+  width: 80%;
   display: block;        /* 🔥 important */
   margin: 40px auto 80px auto;  /* 🔥 centers it */
   border-radius: 0;
