@@ -645,6 +645,7 @@ footer {
   width: 800px;   /* adjust as needed */
   height: auto;
   display: block;
+  transform: translateX(-30px);
 }
 
 .image-note {
@@ -671,4 +672,11 @@ footer {
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
+}
+
+.project-hero5 {
+  width: 80%;
+  display: block;        /* 🔥 important */
+  margin: 0 auto 40px auto;  /* 🔥 centers it */
+  border-radius: 0;
 }
