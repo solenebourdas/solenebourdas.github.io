@@ -662,3 +662,12 @@ footer {
   margin: 0 auto 40px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
+
+.hand-note7 {
+  margin-top: 50px;
+  align-self: flex-end;
+  transform: translateX(40px);  /* 👈 pushes it further right */
+  font-style: italic;
+  font-size: 0.95em;
+  color: #ccc;
+}
