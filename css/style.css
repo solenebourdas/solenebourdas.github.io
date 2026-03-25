@@ -639,6 +639,7 @@ footer {
   align-items: flex-start;
   gap: 1px;
   margin-top: 0px;
+   margin-bottom: -10px;
 }
 
 .image-row img {
@@ -661,7 +662,7 @@ footer {
 .project-hero4 {
   width: 80%;
   display: block;        /* 🔥 important */
-  margin: 0 auto 40px auto;  /* 🔥 centers it */
+  margin: 0 auto 30px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
 
@@ -675,9 +676,9 @@ footer {
 }
 
 .project-hero5 {
-  width: 80%;
+  width: 90%;
   display: block;        /* 🔥 important */
-  margin: 0 auto 40px auto;  /* 🔥 centers it */
+  margin: 20px auto 80px auto;  /* 🔥 centers it */
   border-radius: 0;
   border: 1px solid #888; /* full border */
   border-radius: 0;
