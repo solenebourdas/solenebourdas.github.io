@@ -654,7 +654,7 @@ footer {
   font-size: 0.95em;
   color: #ccc;
   text-align: center;
-  transform: translateY(-100px);
+  transform: translateY(-200px);
 }
 
 .project-hero4 {
@@ -665,9 +665,9 @@ footer {
 }
 
 .hand-note7 {
-  margin-top: 50px;
+  margin-top: 60px;
   align-self: flex-end;
-  transform: translateX(40px);  /* 👈 pushes it further right */
+  transform: translateX(50px);  /* 👈 pushes it further right */
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
