@@ -645,6 +645,7 @@ footer {
   width: 800px;   /* adjust as needed */
   height: auto;
   display: block;
+  transform: translateX(-30px);
 }
 
 .image-note {
