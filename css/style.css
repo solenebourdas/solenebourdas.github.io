@@ -637,7 +637,7 @@ footer {
 .image-row {
   display: flex;
   align-items: flex-start;
-  gap: 1px;
+  gap: -10px;
   margin-top: -10px;
    margin-bottom: -30px;
 }
@@ -655,8 +655,7 @@ footer {
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
-  transform: translateY(-400px);
-   transform: translateX(-10px);
+  transform: translateY(-280px);
 }
 
 .project-hero4 {
