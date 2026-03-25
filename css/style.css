@@ -675,6 +675,13 @@ footer {
   color: #ccc;
 }
 
+
+.image-transition {
+  position: relative;
+  width: 80%;
+  margin: 40px auto 80px auto;
+}
+
 .project-hero5 {
   width: 80%;
   display: block;        /* 🔥 important */
@@ -684,4 +691,14 @@ footer {
   border-radius: 0;
   box-sizing: border-box; 
   cursor: pointer;
+}
+
+/* Text on top of image */
+.image-notetransition {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: yellow;
+  font-size: 0.95em;
+  font-weight: 500;
 }
