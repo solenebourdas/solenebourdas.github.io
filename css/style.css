@@ -637,7 +637,7 @@ footer {
 .project-overview {
   width: 80%;
   display: block;        /* 🔥 important */
-  margin: -20px 80px 0px auto;  /* 🔥 centers it */
+  margin: -20px 20px 0px auto;  /* 🔥 centers it */
   border-radius: 0;
   margin-top: -30px;
 }
