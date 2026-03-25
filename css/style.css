@@ -656,6 +656,7 @@ footer {
   color: #ccc;
   text-align: center;
   transform: translateY(-200px);
+  transform: translateX(-30px);
 }
 
 .project-hero4 {
@@ -666,7 +667,7 @@ footer {
 }
 
 .hand-note7 {
-  margin-top: 60px;
+  margin-top: 65px;
   align-self: flex-end;
   transform: translateX(50px);  /* 👈 pushes it further right */
   font-style: italic;
