@@ -637,7 +637,7 @@ footer {
 .image-row {
   display: flex;
   align-items: flex-start;
-  gap: 0px;
+  gap: 5px;
   margin-top: 0px;
 }
 
@@ -645,18 +645,15 @@ footer {
   width: 800px;   /* adjust as needed */
   height: auto;
   display: block;
-  transform: translateX(-30px);
 }
 
 .image-note {
-  max-width: 400px;
+  max-width: 300px;
   align-self: flex-end;
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
   text-align: center;
-  transform: translateY(-800px);
-  transform: translateX(-40px);
 }
 
 .project-hero4 {
