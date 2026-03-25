@@ -685,9 +685,9 @@ footer {
 .project-hero5 {
   width: 90%;
   display: block;        /* 🔥 important */
-  margin: 40px auto 80px auto;  /* 🔥 centers it */
+  margin: 50px auto 80px auto;  /* 🔥 centers it */
   border-radius: 0;
-  border: 1px solid #888; /* full border */
+  border: 1px solid #ffcc00; /* full border */
   border-radius: 0;
   box-sizing: border-box; 
   cursor: pointer;
@@ -696,9 +696,8 @@ footer {
 /* Text on top of image */
 .image-notetransition {
   position: absolute;
-  top: 10px;                  /* distance from top of image */
-  left: 50%;                  /* center horizontally */
-  transform: translateX(-50%); /* actually centers it */
+  top: 30px;                  /* distance from top of image */                 /* center horizontally */
+  transform: translateX(-50px); /* actually centers it */
   color: #ffcc00;
   font-size: 0.95em;
   font-weight: 500;
