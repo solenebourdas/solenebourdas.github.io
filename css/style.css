@@ -701,17 +701,29 @@ footer {
 .project-gallery3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns for first row */
-  gap: 20px; /* space between images */
+  gap: 20px;
 }
 
-/* Make the last image span full width (centered) */
 .project-gallery3 .project-gallery-item3:nth-child(3) {
   grid-column: 1 / -1; /* spans both columns */
-  justify-self: center; /* optional, centers image */
+  justify-self: center; /* centers image */
 }
 
-.project-gallery-item3 img {
-  width: 100%;
-  display: block;
-  border-radius: 5px;
+/* Image 1 */
+.item1 img {
+  width: 30%;              /* custom width */ /* custom border color */
+  border-radius: 0px;
+}
+
+/* Image 2 */
+.item2 img {
+  width: 70%;
+  border-radius: 0px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+}
+
+/* Image 3 */
+.item3 img {
+  width: 40%;
 }
