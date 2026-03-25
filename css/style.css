@@ -649,12 +649,12 @@ footer {
 }
 
 .image-note {
-  max-width: 450px;
+  max-width: 400px;
   align-self: flex-end;
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
   text-align: center;
-  transform: translateY(-200px);
+  transform: translateY(-400px);
   transform: translateX(-40px);
 }
