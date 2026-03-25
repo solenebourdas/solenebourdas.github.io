@@ -666,9 +666,9 @@ footer {
 }
 
 .hand-note7 {
-  margin-top: 65px;
+  margin-top: 50px;
   align-self: flex-end;
-  transform: translateX(50px);  /* 👈 pushes it further right */
+  transform: translateX(40px);  /* 👈 pushes it further right */
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
@@ -684,7 +684,7 @@ footer {
 .project-hero5 {
   width: 90%;
   display: block;
-  margin: 0px auto 0 auto;  /* space below the text */
+  margin: 0px auto 60px auto;  /* space below the text */
   border: 1px solid #ffcc00;
   border-radius: 0;
   box-sizing: border-box;
