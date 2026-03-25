@@ -696,8 +696,8 @@ footer {
 /* Text on top of image */
 .image-notetransition {
   position: absolute;
-  top: 30px;                  /* distance from top of image */                 /* center horizontally */
-  transform: translateX(-50px); /* actually centers it */
+  top: -10px;                  /* distance from top of image */                 /* center horizontally */
+  transform: translateX(-30px); /* actually centers it */
   color: #ffcc00;
   font-size: 0.95em;
   font-weight: 500;
