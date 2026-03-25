@@ -678,12 +678,12 @@ footer {
 
 .image-transition {
   position: relative;
-  width: 80%;
+  width: 90%;
   margin: 40px auto 80px auto;
 }
 
 .project-hero5 {
-  width: 80%;
+  width: 100%;
   display: block;        /* 🔥 important */
   margin: 40px auto 80px auto;  /* 🔥 centers it */
   border-radius: 0;
@@ -698,7 +698,7 @@ footer {
   position: absolute;
   top: 10px;
   left: 15px;
-  color: yellow;
+  color: #ffcc00;
   font-size: 0.95em;
   font-weight: 500;
 }
