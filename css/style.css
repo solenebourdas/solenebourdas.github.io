@@ -655,7 +655,8 @@ footer {
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
-  transform: translateY(-200px);
+  transform: translateY(-280px);
+   transform: translateX(-10px);
 }
 
 .project-hero4 {
