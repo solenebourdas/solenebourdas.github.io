@@ -711,13 +711,13 @@ footer {
 
 /* Image 1 */
 .item1 img {
-  width: 30%;              /* custom width */ /* custom border color */
+  width: 60%;              /* custom width */ /* custom border color */
   border-radius: 0px;
 }
 
 /* Image 2 */
 .item2 img {
-  width: 70%;
+  width: 90%;
   border-radius: 0px;
   border: 1px solid #ccc;
   border-radius: 0px;
@@ -725,5 +725,5 @@ footer {
 
 /* Image 3 */
 .item3 img {
-  width: 40%;
+  width: 35%;
 }
