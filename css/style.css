@@ -697,3 +697,21 @@ footer {
   font-weight: 500;
   margin-bottom: 0px; /* space between note and image */
 }
+
+.project-gallery3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for first row */
+  gap: 20px; /* space between images */
+}
+
+/* Make the last image span full width (centered) */
+.project-gallery3 .project-gallery-item3:nth-child(3) {
+  grid-column: 1 / -1; /* spans both columns */
+  justify-self: center; /* optional, centers image */
+}
+
+.project-gallery-item3 img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
