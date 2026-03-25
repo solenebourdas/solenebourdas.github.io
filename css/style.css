@@ -678,7 +678,7 @@ footer {
 
 .image-transition {
   width: 90%;
-  margin: 40px auto 80px auto;
+  margin: 30px auto 50px auto;
   text-align: center; /* centers both text and image */
 }
 
@@ -696,5 +696,5 @@ footer {
   color: #ffcc00;
   font-size: 0.95em;
   font-weight: 500;
-  margin-bottom: 10px; /* space between note and image */
+  margin-bottom: 0px; /* space between note and image */
 }
