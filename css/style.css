@@ -709,12 +709,13 @@ footer {
 .image-wrapper-pro3 {
   position: relative;
   width: fit-content;
-  margin: 0px -10px 0px auto;  /* 🔥 pushes whole block to the right */
+  margin: -20px 0 0 auto;  /* 🔼 up (negative top) */
+  margin-right: 20px;      /* ⬅️ left (reduce or adjust) */
 }
 
 /* IMAGE */
 .project-hero6 {
-  width: 370px;
+  width: 400px;
   display: block;
   padding: 0;
   margin: 0;
