@@ -710,11 +710,12 @@ footer {
   display: block;
   padding: 60px;
   border-radius: 0;
-  transform: translateY(-150px);
+  transform: translateY(-170px);
+  margin-bottom: -100px;
 }
 
 .hand-note8 {
-  margin-top: 40px;
+  margin-top: 30px;
   align-self: flex-end;
   transform: translateX(-50px);  /* 👈 pushes it further right */
   font-style: italic;
