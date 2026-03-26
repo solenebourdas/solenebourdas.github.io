@@ -753,3 +753,9 @@ footer {
   display: block;
   margin: 0 auto;           /* centers the image */
 }
+
+.method-image3 {
+  width: 400px;       /* adjust size */
+  height: auto;
+  border-radius: 0;
+}
