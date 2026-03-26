@@ -710,15 +710,13 @@ footer {
   display: block;
   padding: 60px;
   border-radius: 0;
-  transform: translateY(-170px);
-  margin-bottom: -100px;
+  transform: translateY(-100px);
 }
 
 .hand-note8 {
   position: absolute;   /* 🔥 puts text ON the image */
-  top: 10px;            /* distance from top */
-  left: 50%;            /* center horizontally */
-  transform: translateX(-50%);
+  top: 10px;            /* distance from top */         /* center horizontally */
+  transform: translateX(10px);
   color: #ccc;
   font-size: 0.95em;
   font-style: italic;
