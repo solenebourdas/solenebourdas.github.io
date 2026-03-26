@@ -708,29 +708,29 @@ footer {
 
 .image-wrapper-pro3 {
   position: relative;
-  width: fit-content;   /* wraps tightly around image */
-  margin: 40px 0;       /* control spacing cleanly */
+  width: fit-content;
+  margin: 40px 0 0px auto;  /* 🔥 pushes whole block to the right */
 }
 
 /* IMAGE */
 .project-hero6 {
-  width: 300px;         /* or whatever size you want */
+  width: 370px;
   display: block;
-  padding: 0;           /* ❌ remove huge padding */
-  margin: 0;            /* ❌ remove weird spacing */
+  padding: 0;
+  margin: 0;
   border-radius: 0;
 }
 
-/* NOTE (top-right of image, OUTSIDE) */
+/* NOTE (top-left of image, OUTSIDE) */
 .hand-note8 {
   position: absolute;
   top: 0;
-  left: 100%;           /* push to the right of image */
-  margin-left: 10px;    /* small gap */
+  right: 100%;           /* 🔥 move to LEFT of image */
+  margin-right: 10px;    /* space between text and image */
 
-  width: 200px;         /* control text width */
+  width: 300px;
   color: #ccc;
   font-size: 0.95em;
   font-style: italic;
-  text-align: left;
+  text-align: right;     /* aligns nicely toward image */
 }
