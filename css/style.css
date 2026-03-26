@@ -708,15 +708,15 @@ footer {
 .project-hero6 {
   width: 40%;
   display: block;
-  padding: 60px;
+  padding: 200px;
   border-radius: 0;
-  transform: translateY(-100px);
+  transform: translateY(-80px);
 }
 
 .hand-note8 {
   position: absolute;   /* 🔥 puts text ON the image */
   top: 10px;            /* distance from top */         /* center horizontally */
-  transform: translateX(10px);
+  transform: translateX(70px);
   color: #ccc;
   font-size: 0.95em;
   font-style: italic;
@@ -727,5 +727,6 @@ footer {
   position: relative;   /* 🔥 key: reference for absolute text */
   width: 100%;
   margin: 0 auto;
+  margin-bottom: -80px;
 }
 
