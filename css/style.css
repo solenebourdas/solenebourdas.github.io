@@ -726,7 +726,7 @@ footer {
 .hand-note8 {
   position: absolute;
   top: 15px;
-  right: 60%;           /* 🔥 move to LEFT of image */
+  right: 80%;           /* 🔥 move to LEFT of image */
   margin-right: 0px;    /* space between text and image */
   width: 300px;
   color: #ccc;
