@@ -709,7 +709,7 @@ footer {
 .image-wrapper-pro3 {
   position: relative;
   width: fit-content;
-  margin: 40px 0 0px auto;  /* 🔥 pushes whole block to the right */
+  margin: 0px -10px 0px auto;  /* 🔥 pushes whole block to the right */
 }
 
 /* IMAGE */
@@ -726,7 +726,7 @@ footer {
   position: absolute;
   top: 0;
   right: 100%;           /* 🔥 move to LEFT of image */
-  margin-right: 10px;    /* space between text and image */
+  margin-right: 0px;    /* space between text and image */
 
   width: 300px;
   color: #ccc;
