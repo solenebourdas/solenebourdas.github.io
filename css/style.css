@@ -705,28 +705,32 @@ footer {
   border-radius: 0;
 }
 
-.project-hero6 {
-  width: 40%;
-  display: block;
-  padding: 200px;
-  border-radius: 0;
-  transform: translateY(-80px);
+
+.image-wrapper-pro3 {
+  position: relative;
+  width: fit-content;   /* wraps tightly around image */
+  margin: 40px 0;       /* control spacing cleanly */
 }
 
+/* IMAGE */
+.project-hero6 {
+  width: 300px;         /* or whatever size you want */
+  display: block;
+  padding: 0;           /* ❌ remove huge padding */
+  margin: 0;            /* ❌ remove weird spacing */
+  border-radius: 0;
+}
+
+/* NOTE (top-right of image, OUTSIDE) */
 .hand-note8 {
-  position: absolute;   /* 🔥 puts text ON the image */
-  top: 10px;            /* distance from top */         /* center horizontally */
-  transform: translateX(70px);
+  position: absolute;
+  top: 0;
+  left: 100%;           /* push to the right of image */
+  margin-left: 10px;    /* small gap */
+
+  width: 200px;         /* control text width */
   color: #ccc;
   font-size: 0.95em;
   font-style: italic;
-  text-align: center;
+  text-align: left;
 }
-
-.image-wrapper-pro3{
-  position: relative;   /* 🔥 key: reference for absolute text */
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: -80px;
-}
-
