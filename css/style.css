@@ -709,7 +709,7 @@ footer {
 .image-wrapper-pro3 {
   position: relative;
   width: fit-content;
-  margin: -25px 0 -30px auto;  /* 🔼 up (negative top) */
+  margin: -30px 0 -40px auto;  /* 🔼 up (negative top) */
   margin-right: 50px;      /* ⬅️ left (reduce or adjust) */
 }
 
@@ -726,7 +726,7 @@ footer {
 .hand-note8 {
   position: absolute;
   top: 10px;
-  right: 60%;           /* 🔥 move to LEFT of image */
+  right: 70%;           /* 🔥 move to LEFT of image */
   margin-right: 0px;    /* space between text and image */
 
   width: 300px;
