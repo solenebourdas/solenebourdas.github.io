@@ -715,11 +715,19 @@ footer {
 }
 
 .hand-note8 {
-  margin-top: 30px;
-  align-self: flex-end;
-  transform: translateX(-50px);  /* 👈 pushes it further right */
-  font-style: italic;
-  font-size: 0.95em;
+  position: absolute;   /* 🔥 puts text ON the image */
+  top: 10px;            /* distance from top */
+  left: 50%;            /* center horizontally */
+  transform: translateX(-50%);
   color: #ccc;
+  font-size: 0.95em;
+  font-style: italic;
   text-align: center;
 }
+
+.image-wrapper-pro3{
+  position: relative;   /* 🔥 key: reference for absolute text */
+  width: 100%;
+  margin: 0 auto;
+}
+
