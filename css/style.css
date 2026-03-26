@@ -701,61 +701,19 @@ footer {
 
 
 
-/* Top row: Image 1 + Results text */
-.result-layout-project3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* image left, text right */
-  gap: 20px;
-  align-items: start;
-  margin-bottom: 40px;
-}
-
-.result-layout-project3 img {
-  width: 70%;          /* adjust width as needed */
-  border-radius: 0px;
-}
-
-/* Bottom row: 2 images side by side */
-.project-gallery3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 60px;
-}
-
-.project-gallery3 img {
-  width: 100%;
-  border: none;         /* no border for bottom images by default */
-  border-radius: 0;     /* no rounding */
-}
-
-/* Optional text styling */
-.result-layout-project3 h3 {
-  margin-bottom: 10px;
-}
-
-.result-layout-project3 p {
-  line-height: 1.5;
-}
-
-/* Special styling for Image 2 only */
-.item2 img {
-  width: 100%;
-  border: 1px solid #ccc;  /* border only for this image */
-  border-radius: 0;         /* no rounding */
-  display: block;
-  margin: 0 auto;           /* centers the image */
-}
-
-.item3 img {
-  width: 60%;
-  border-radius: 0;         /* no rounding */
-  display: block;
-  margin: 0 auto;           /* centers the image */
-}
 
 .method-image3 {
   width: 400px;       /* adjust size */
   height: auto;
   border-radius: 0;
+}
+
+.project-hero6 {
+  width: 90%;
+  display: block;
+  margin: 0px auto 60px auto;  /* space below the text */
+  border: 1px solid #ffcc00;
+  border-radius: 0;
+  box-sizing: border-box;
+  cursor: pointer;
 }
