@@ -703,17 +703,16 @@ footer {
 
 
 .method-image3 {
-  width: 400px;       /* adjust size */
+  width: 350px;       /* adjust size */
   height: auto;
   border-radius: 0;
 }
 
 .project-hero6 {
-  width: 90%;
+  width: 50%;
   display: block;
-  margin: 0px auto 60px auto;  /* space below the text */
-  border: 1px solid #ffcc00;
+  padding: 60px;
+  margin-top: 30px; 
+  margin-bottom: 0px; 
   border-radius: 0;
-  box-sizing: border-box;
-  cursor: pointer;
 }
