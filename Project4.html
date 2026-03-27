@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research - Solène Bourdas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+  <!-- Header / Menu -->
+<header>
+  <h1>Solène Bourdas</h1>
+  <nav>
+    <a href="index.html">About me</a> 
+    <a href="Research.html">Research</a> 
+    <a href="CV.html">CV</a> 
+    <a href="Publications.html">Publications</a> 
+    <a href="Communication.html">Communication</a>
+    <a href="Gallery.html">Gallery</a> 
+  </nav>
+</header>
+
+  <!-- Main Content -->
+ <main class="project-page">
+
+   <a href="Research.html" class="back-link">← Back to Research</a>
+   
+  <h2 class="project-title">
+    Functional morphology and swimming performance of iniopterygian holocephalans
+  </h2>
+
+  <p class="project-meta">
+    Supervised by Lauren Sallan · Okinawa Institute of Science and Technology · 2025
+  </p>
+
+  <img src="Images/project1-4.jpg" class="project-hero">
+
+  <section class="project-section">
+    <h3>Overview</h3>
+    <p>This project investigated the functional morphology and hydrodynamic performance of iniopterygian holocephalans, extinct Carboniferous cartilaginous fishes characterized by dorsally inserted pectoral fins. 
+      The aim was to test functional and ecological hypotheses explaining this unusual morphology, using extant chimaeras as comparative models.</p>
+  </section>
+   
+<section class="project-section">
+     
+ <div class="method-layout">
+ 
+    <div class="method-text">
+      <h3>Methods</h3>
+      <p>
+        Fossil specimens were CT scanned and segmented using Amira. Based on these data, along with published reconstructions, 3D digital body models were generated in Blender. Comparative chimaera models were produced following the same workflow from CT data.
+
+Computational fluid dynamics (CFD) simulations were then conducted in OpenFOAM to quantify hydrodynamic performance under different fin configurations. Lift and drag coefficients were calculated to assess locomotor efficiency and vertical maneuverability.
+      </p>
+        <p class="hand-note"> 
+          Example of shell bed virtual slice ⬏
+    </p>
+    </div>
+
+    <img src="Images/project1-7.png" class="method-image">
+
+  </div>
+  </section>
+
+  <section class="project-section">
+   <div class="result-layout">
+    
+    <div class="result-text">
+     <h3>Results</h3>
+    <p>Results indicate that dorsal pectoral fin insertion enhances lift production, supporting efficient vertical movement and suggesting a mid-water ecological niche. In contrast, chimaera morphology appears better suited to benthic stabilization strategies.
+
+This integrative approach—combining virtual paleontology, 3D modeling, and CFD, provides quantitative evidence for ecological differentiation among early holocephalans and offers new insights into the evolution of locomotion in cartilaginous fishes. Scientific visualizations were produced for dissemination, and a manuscript is currently in preparation.
+      </p>
+        <p class="hand-note2"> 
+         ⬐ Results were presented as a poster at a student scientific conference (click on it to view)
+    </p>
+    </div>
+
+     
+ </div>
+</section>
+    
+<section class="project-gallery">
+ <div class="project-gallery-item">
+  <img src="Images/project1-6.jpg" class="clickable-img" onclick="openImage(this.src)">
+</div>
+  <div class="project-gallery-item">
+    <img src="Images/project1-1.jpg" alt="Project 1 image">
+     <p class="image-caption">The beautiful Pinhay Bay</p>
+  </div>
+</section>
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Solène Bourdas</p>
+  </footer>
+
+
+<div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img" onclick="event.stopPropagation()">
+</div>
+
+<script>
+function openImage(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeImage() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+  
+</body>
+</html>
