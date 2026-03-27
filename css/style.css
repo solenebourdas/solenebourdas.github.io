@@ -743,10 +743,10 @@ footer {
 }
 
 .project-hero8 {
-  width: 80%;
+  width: 60%;
   display: block;        /* 🔥 important */
   margin: 0 auto 40px auto;  /* 🔥 centers it */
-  border: 1px solid #ffcc00;
+  border: 1px solid #888;
   border-radius: 0;
   box-sizing: border-box;
 }
@@ -762,4 +762,11 @@ footer {
   max-width: 50%;
   height: auto;
   display: block;
+}
+
+.method-pro4 {
+  display: flex;
+  gap: 0px;
+  align-items: flex-start;
+  margin-top: 50px; 
 }
