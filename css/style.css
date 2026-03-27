@@ -734,3 +734,24 @@ footer {
   font-style: italic;
   text-align: center;     /* aligns nicely toward image */
 }
+
+.project-hero7 {
+  width: 80%;
+  display: block;        /* 🔥 important */
+  margin: 0 auto 30px auto;  /* 🔥 centers it */
+  border-radius: 0;
+}
+
+.project-hero8 {
+  width: 80%;
+  display: block;        /* 🔥 important */
+  margin: 0 auto 30px auto;  /* 🔥 centers it */
+  border-radius: 0;
+}
+
+.project-hero9 {
+  width: 80%;
+  display: block;        /* 🔥 important */
+  margin: 0 auto 30px auto;  /* 🔥 centers it */
+  border-radius: 0;
+}
