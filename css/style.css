@@ -760,14 +760,14 @@ footer {
 
 .method-pro4 {
   display: flex;
-  gap: 20px;              /* normal spacing */
+  gap: 0px;              /* normal spacing */
   align-items: flex-start;
   margin-top: 50px; 
 }
 
 .method-text-pro4 {
   flex: 1;                /* text takes all available space */
-  max-width: 600px;       /* optional: controls line length */
+  max-width: 500px;       /* optional: controls line length */
 }
 
 .project-video2 {
