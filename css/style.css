@@ -755,3 +755,9 @@ footer {
   margin: 0 auto 30px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
+
+.project-video2 {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
