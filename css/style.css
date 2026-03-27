@@ -758,16 +758,20 @@ footer {
   border-radius: 0;
 }
 
-.project-video2 {
-  max-width: 60%;
-  height: auto;
-  display: block;
-  transform: translateX(60px);
-}
-
 .method-pro4 {
   display: flex;
-  gap: -30px;
+  gap: 20px;              /* normal spacing */
   align-items: flex-start;
   margin-top: 50px; 
+}
+
+.method-text-pro4 {
+  flex: 1;                /* text takes all available space */
+  max-width: 600px;       /* optional: controls line length */
+}
+
+.project-video2 {
+  width: 400px;           /* fixed width for the video */
+  height: auto;
+  display: block;
 }
