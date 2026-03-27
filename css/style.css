@@ -767,7 +767,7 @@ footer {
 
 .method-pro4 {
   display: flex;
-  gap: 0px;
+  gap: -30px;
   align-items: flex-start;
   margin-top: 50px; 
 }
