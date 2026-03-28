@@ -771,7 +771,19 @@ footer {
 }
 
 .project-video2 {
-  width: 600px;           /* fixed width for the video */
+  width: 550px;           /* fixed width for the video */
   height: auto;
   display: block;
+}
+
+.hand-note9 {
+  position: absolute;
+  top: 20px;
+  right: 75%;           /* 🔥 move to LEFT of image */
+  margin-right: 0px;    /* space between text and image */
+  width: 300px;
+  color: #ccc;
+  font-size: 0.95em;
+  font-style: italic;
+  text-align: center;     /* aligns nicely toward image */
 }
