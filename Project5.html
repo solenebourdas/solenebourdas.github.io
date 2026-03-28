@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research - Solène Bourdas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+  <!-- Header / Menu -->
+<header>
+  <h1>Solène Bourdas</h1>
+  <nav>
+    <a href="index.html">About me</a> 
+    <a href="Research.html">Research</a> 
+    <a href="CV.html">CV</a> 
+    <a href="Publications.html">Publications</a> 
+    <a href="Communication.html">Communication</a>
+    <a href="Gallery.html">Gallery</a> 
+  </nav>
+</header>
+
+  <!-- Main Content -->
+ <main class="project-page">
+
+   <a href="Research.html" class="back-link">← Back to Research</a>
+   
+  <h2 class="project-title">
+    Three-dimensional analysis of trace fossils
+  </h2>
+
+  <p class="project-meta">
+    Supervised by Richard Twitchett · Natural History Museum of London · 2023
+  </p>
+
+  <img src="Images/project1-4.jpg" class="project-hero">
+
+  <section class="project-section">
+    <h3>Overview</h3>
+    <p>This project explored fossil shell beds as records of past ecological dynamics. These deposits can preserve information on species composition, size distribution, spatial organization, and biotic interactions, but this data is often difficult to access when fossils are embedded in rock.
+
+The aim was to develop a non-destructive imaging workflow to visualize and study fossils within consolidated shell beds.</p>
+  </section>
+   
+<section class="project-section">
+     
+ <div class="method-layout">
+ 
+    <div class="method-text">
+      <h3>Methods</h3>
+      <p>
+        Fieldwork was carried out at Pinhay Bay (Devon, UK), sampling Upper Triassic deposits. Specimens were CT-scanned, and volumetric datasets were processed to digitally isolate individual fossils.
+
+Segmentation and 3D reconstructions were performed using ImageJ and Avizo, taking advantage of natural density contrasts between the rock matrix and fossil cavities.
+      </p>
+        <p class="hand-note"> 
+          Example of shell bed virtual slice ⬏
+    </p>
+    </div>
+
+    <img src="Images/project1-7.png" class="method-image">
+
+  </div>
+  </section>
+
+  <section class="project-section">
+   <div class="result-layout">
+    
+    <div class="result-text">
+     <h3>Results</h3>
+    <p>The assemblage included corals, gastropods, and bivalves, revealing a diverse ancient community.
+
+3D reconstructions made it possible to observe biotic interactions, such as corals encrusting bivalve shells, providing insights into paleoecological relationships and environmental conditions.
+
+This project highlights the potential of CT-based virtual paleontology for studying fossil communities in 3D and opens the way for future quantitative comparisons of shell-bed ecosystems. 
+      </p>
+        <p class="hand-note2"> 
+         ⬐ Results were presented as a poster at a student scientific conference (click on it to view)
+    </p>
+    </div>
+
+     
+ </div>
+</section>
+    
+<section class="project-gallery">
+ <div class="project-gallery-item">
+  <img src="Images/project1-6.jpg" class="clickable-img" onclick="openImage(this.src)">
+</div>
+  <div class="project-gallery-item">
+    <img src="Images/project1-1.jpg" alt="Project 1 image">
+     <p class="image-caption">The beautiful Pinhay Bay</p>
+  </div>
+</section>
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Solène Bourdas</p>
+  </footer>
+
+
+<div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img" onclick="event.stopPropagation()">
+</div>
+
+<script>
+function openImage(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeImage() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+  
+</body>
+</html>
