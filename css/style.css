@@ -760,7 +760,7 @@ footer {
 
 .method-pro4 {
   display: flex;
-  gap: 10px;              /* normal spacing */
+  gap: 0px;              /* normal spacing */
   align-items: flex-start;
   margin-top: 30px; 
   margin-right: -50px;
@@ -768,7 +768,7 @@ footer {
 
 .method-text-pro4 {
   flex: 1;                /* text takes all available space */
-  max-width: 500px;       /* optional: controls line length */
+  max-width: 550px;       /* optional: controls line length */
 }
 
 .project-video2 {
@@ -779,8 +779,8 @@ footer {
 
 .hand-note9 {
   position: absolute;
-  top: -70px;          /* 🔥 move to LEFT of image */
-  margin-right: 0px;    /* space between text and image */
+  top: -80px;          /* 🔥 move to LEFT of image */
+  margin-left: 50px;    /* space between text and image */
   width: 400px;
   color: #ccc;
   font-size: 0.95em;
