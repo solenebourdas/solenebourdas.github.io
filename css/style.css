@@ -754,7 +754,7 @@ footer {
 .project-hero9 {
   width: 70%;
   display: block;        /* 🔥 important */
-  margin: 10px auto -40px auto;  /* 🔥 centers it */
+  margin: 5px auto -40px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
 
@@ -794,7 +794,7 @@ footer {
 }
 
 .image-caption-pro4 {
-  margin-top: 15px;          /* space between image and caption */
+  margin-top: 25px;          /* space between image and caption */
   font-style: italic;
   font-size: 0.95em;
   color: #ccc;
