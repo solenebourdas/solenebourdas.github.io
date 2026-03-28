@@ -778,7 +778,7 @@ footer {
 
 .hand-note9 {
   position: absolute;
-  top: 0px;          /* 🔥 move to LEFT of image */
+  top: -50px;          /* 🔥 move to LEFT of image */
   margin-right: 0px;    /* space between text and image */
   width: 400px;
   color: #ccc;
@@ -790,5 +790,5 @@ footer {
 .image-wrapper-pro4 {
   position: relative;
   width: fit-content;
-  margin: 40px 0 50px auto;  /* 🔼 up (negative top) */     /* ⬅️ left (reduce or adjust) */
+  margin: 50px 0 50px auto;  /* 🔼 up (negative top) */     /* ⬅️ left (reduce or adjust) */
 }
