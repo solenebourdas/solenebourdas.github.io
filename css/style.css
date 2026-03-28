@@ -754,7 +754,7 @@ footer {
 .project-hero9 {
   width: 70%;
   display: block;        /* 🔥 important */
-  margin: 50px auto -40px auto;  /* 🔥 centers it */
+  margin: 60px auto -40px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
 
@@ -763,6 +763,7 @@ footer {
   gap: 10px;              /* normal spacing */
   align-items: flex-start;
   margin-top: 30px; 
+  margin-right: -50px;
 }
 
 .method-text-pro4 {
@@ -771,20 +772,19 @@ footer {
 }
 
 .project-video2 {
-  width: 580px;           /* fixed width for the video */
+  width: 600px;           /* fixed width for the video */
   height: auto;
   display: block;
 }
 
 .hand-note9 {
   position: absolute;
-  top: -50px;          /* 🔥 move to LEFT of image */
+  top: -70px;          /* 🔥 move to LEFT of image */
   margin-right: 0px;    /* space between text and image */
   width: 400px;
   color: #ccc;
   font-size: 0.95em;
-  font-style: italic;
-  text-align: center;     /* aligns nicely toward image */
+  font-style: italic;     /* aligns nicely toward image */
 }
 
 .image-wrapper-pro4 {
