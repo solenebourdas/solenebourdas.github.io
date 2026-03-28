@@ -792,3 +792,11 @@ footer {
   width: fit-content;
   margin: 50px 0 50px auto;  /* 🔼 up (negative top) */     /* ⬅️ left (reduce or adjust) */
 }
+
+.image-caption-pro4 {
+  margin-top: 5px;          /* space between image and caption */
+  font-style: italic;
+  font-size: 0.95em;
+  color: #ccc;
+  text-align: center;
+}
