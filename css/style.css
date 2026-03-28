@@ -745,7 +745,7 @@ footer {
 .project-hero8 {
   width: 65%;
   display: block;        /* 🔥 important */
-  margin: 0 auto 40px auto;  /* 🔥 centers it */
+  margin: 0px auto 0px auto;  /* 🔥 centers it */
   border: 1px solid #ffffff;
   border-radius: 0;
   box-sizing: border-box;
@@ -754,15 +754,15 @@ footer {
 .project-hero9 {
   width: 70%;
   display: block;        /* 🔥 important */
-  margin: 30px auto -30px auto;  /* 🔥 centers it */
+  margin: 50px auto -40px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
 
 .method-pro4 {
   display: flex;
-  gap: 20px;              /* normal spacing */
+  gap: 10px;              /* normal spacing */
   align-items: flex-start;
-  margin-top: 50px; 
+  margin-top: 30px; 
 }
 
 .method-text-pro4 {
@@ -771,17 +771,16 @@ footer {
 }
 
 .project-video2 {
-  width: 550px;           /* fixed width for the video */
+  width: 580px;           /* fixed width for the video */
   height: auto;
   display: block;
 }
 
 .hand-note9 {
   position: absolute;
-  top: 20px;
-  right: 75%;           /* 🔥 move to LEFT of image */
+  top: 0px;          /* 🔥 move to LEFT of image */
   margin-right: 0px;    /* space between text and image */
-  width: 300px;
+  width: 400px;
   color: #ccc;
   font-size: 0.95em;
   font-style: italic;
@@ -791,6 +790,5 @@ footer {
 .image-wrapper-pro4 {
   position: relative;
   width: fit-content;
-  margin: -40px 0 -50px auto;  /* 🔼 up (negative top) */
-  margin-right: 50px;      /* ⬅️ left (reduce or adjust) */
+  margin: 40px 0 50px auto;  /* 🔼 up (negative top) */     /* ⬅️ left (reduce or adjust) */
 }
