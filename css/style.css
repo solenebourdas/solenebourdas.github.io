@@ -754,7 +754,7 @@ footer {
 .project-hero9 {
   width: 70%;
   display: block;        /* 🔥 important */
-  margin: 40px auto -40px auto;  /* 🔥 centers it */
+  margin: 10px auto -40px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
 
@@ -779,8 +779,8 @@ footer {
 
 .hand-note9 {
   position: absolute;
-  top: -80px;          /* 🔥 move to LEFT of image */
-  margin-left: 50px;    /* space between text and image */
+  top: -85px;          /* 🔥 move to LEFT of image */
+  margin-left: 100px;    /* space between text and image */
   width: 400px;
   color: #ccc;
   font-size: 0.95em;
