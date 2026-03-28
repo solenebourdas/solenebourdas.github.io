@@ -760,7 +760,7 @@ footer {
 
 .method-pro4 {
   display: flex;
-  gap: 0px;              /* normal spacing */
+  gap: 20px;              /* normal spacing */
   align-items: flex-start;
   margin-top: 50px; 
 }
@@ -786,4 +786,11 @@ footer {
   font-size: 0.95em;
   font-style: italic;
   text-align: center;     /* aligns nicely toward image */
+}
+
+.image-wrapper-pro4 {
+  position: relative;
+  width: fit-content;
+  margin: -40px 0 -50px auto;  /* 🔼 up (negative top) */
+  margin-right: 50px;      /* ⬅️ left (reduce or adjust) */
 }
