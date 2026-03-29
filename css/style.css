@@ -184,10 +184,14 @@ img {
 /* ===================================================== */
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  margin-top: 20px;
+}
+
+.grid > * {
+  width: calc(33.33% - 20px);
 }
 
 .project {
