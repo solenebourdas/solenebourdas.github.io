@@ -816,3 +816,22 @@ footer {
   margin: 0 auto 20px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
+
+.image-wrapper-pro5 {
+  position: relative;
+  width: fit-content;
+  margin: 0px 0 0px auto;  /* 🔼 up (negative top) */
+  margin-right: 0px;      /* ⬅️ left (reduce or adjust) */
+}
+
+/* NOTE (top-left of image, OUTSIDE) */
+.hand-note11 {
+  position: absolute;
+  top: 20px;          /* 🔥 move to LEFT of image */
+  margin-right: 0px;    /* space between text and image */
+  width: 300px;
+  color: #ccc;
+  font-size: 0.95em;
+  font-style: italic;
+  text-align: center;     /* aligns nicely toward image */
+}
