@@ -813,7 +813,7 @@ footer {
 .project-hero10 {
   width: 60%;
   display: block;        /* 🔥 important */
-  margin: 0 60px 20px auto;  /* 🔥 centers it */
+  margin: 0 65px 20px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
 
