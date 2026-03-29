@@ -33,7 +33,7 @@
     Supervised by Javier Ortega-Hernández and Rudy Lerosey-Aubril · Havard University · 2025
   </p>
 
-  <img src="Images/project1-4.jpg" class="project-hero">
+  <img src="Images/project5-6.png" class="project-hero">
 
   <section class="project-section">
     <h3>Overview</h3>
@@ -50,17 +50,19 @@
       <h3>Methods</h3>
       <p>
         The slabs were CT scanned, and each trace fossil was individually segmented using Dragonfly software. 
-        Their morphology and spatial arrangement were then analysed using parameters such as size, position, clustering, and thickness, in a reproducible way. 
+        Their morphology and spatial arrangement were then analysed using parameters such as size, orientation, position, clustering, and width, in a reproducible way. 
         In total, around 4,000 traces were reconstructed and analysed across 40 fossil slabs.
         <p class="hand-note"> 
-          Example of shell bed virtual slice ⬏
+          Orientation is measured as the angle relative to the sedimentary layer
     </p>
     </div>
 
-    <img src="Images/project1-7.png" class="method-image">
+    <img src="Images/project5.2.png" class="method-image">
 
   </div>
   </section>
+
+  <img src="Images/project5-3.png" class="project-hero">
 
   <section class="project-section">
    <div class="result-layout">
@@ -69,9 +71,7 @@
      <h3>Results</h3>
     <p>The results provide evidence for the presence of endobenthic organisms within these assemblages. 
       This large-scale analysis offers valuable insights into community composition and functioning, as well as the processes involved in fossil preservation. 
-      Applying this approach to other assemblages would allow meaningful comparisons of ancient ecosystems and their preservation.      </p>
-        <p class="hand-note2"> 
-         ⬐ Results were presented as a poster at a student scientific conference (click on it to view)
+      Applying this approach to other assemblages would allow meaningful comparisons of ancient ecosystems and their preservation.    
     </p>
     </div>
 
@@ -79,37 +79,12 @@
  </div>
 </section>
     
-<section class="project-gallery">
- <div class="project-gallery-item">
-  <img src="Images/project1-6.jpg" class="clickable-img" onclick="openImage(this.src)">
-</div>
-  <div class="project-gallery-item">
-    <img src="Images/project1-1.jpg" alt="Project 1 image">
-     <p class="image-caption">The beautiful Pinhay Bay</p>
-  </div>
-</section>
-</main>
-
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Solène Bourdas</p>
   </footer>
 
 
-<div id="lightbox" onclick="closeImage()">
-  <img id="lightbox-img" onclick="event.stopPropagation()">
-</div>
-
-<script>
-function openImage(src) {
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = src;
-}
-
-function closeImage() {
-  document.getElementById("lightbox").style.display = "none";
-}
-</script>
   
 </body>
 </html>
