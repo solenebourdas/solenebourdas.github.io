@@ -813,7 +813,7 @@ footer {
 .project-hero10 {
   width: 60%;
   display: block;        /* 🔥 important */
-  margin: 0 auto 20px auto;  /* 🔥 centers it */
+  margin: 0 60px 20px auto;  /* 🔥 centers it */
   border-radius: 0;
 }
 
@@ -829,7 +829,7 @@ footer {
   position: absolute;
   top: 20px;          /* 🔥 move to LEFT of image */
   margin-right: 0px;    /* space between text and image */
-  width: 300px;
+  width: 400px;
   color: #ccc;
   font-size: 0.95em;
   font-style: italic;
