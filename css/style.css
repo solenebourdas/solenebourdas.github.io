@@ -198,7 +198,7 @@ img {
 .project {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0px;
   cursor: pointer;
 }
 
@@ -210,6 +210,8 @@ img {
   transition: transform 0.3s ease;
   border: 1px solid #ccc; /* ✅ add "solid" */
   display: block;
+  border-radius: 0;
+  box-sizing: border-box;
 }
 
 .project:hover img {
