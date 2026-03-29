@@ -800,3 +800,19 @@ footer {
   color: #ccc;
   text-align: center;
 }
+
+.hand-note10 {
+  margin-top: 50px;
+  align-self: flex-end;
+  transform: translateX(40px);  /* 👈 pushes it further right */
+  font-style: italic;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+.project-hero10 {
+  width: 60%;
+  display: block;        /* 🔥 important */
+  margin: 0 auto 20px auto;  /* 🔥 centers it */
+  border-radius: 0;
+}
