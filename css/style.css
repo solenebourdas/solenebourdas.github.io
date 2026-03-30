@@ -215,6 +215,7 @@ img {
 .project:nth-child(4) { animation-delay: 0.4s; }
 .project:nth-child(5) { animation-delay: 0.5s; }
 
+
 @keyframes fadeUp {
   to {
     opacity: 1;
