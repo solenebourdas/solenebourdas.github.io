@@ -198,8 +198,10 @@ img {
 .project {
   position: relative;
   overflow: hidden;
-  border-radius: 0px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
   cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 /* Project images */
@@ -207,27 +209,34 @@ img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  transition: transform 0.3s ease;
-  border: 1px solid #ccc; /* ✅ add "solid" */
   display: block;
-  border-radius: 0;
-  box-sizing: border-box;
+  transition: transform 0.4s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px); /* subtle lift */
+  border-color: rgba(255,255,255,0.6);
 }
 
 .project:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03); /* smaller zoom */
 }
-
 /* Text overlay on images */
 .title-overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
   color: #fff;
   text-align: center;
-  padding: 10px;
-  font-weight: bold;
+  padding: 15px 10px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project:hover .title-overlay {
+  opacity: 1;
 }
 
 
