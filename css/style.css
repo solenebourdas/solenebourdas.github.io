@@ -187,17 +187,19 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
+  margin-top: 50px;
 }
 
 .project {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 12px;
+  background: #0a0a0a;
+  width: 300px;
   cursor: pointer;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-  width: 250px;
-  background: black;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .project img {
@@ -205,12 +207,17 @@ img {
   height: 200px;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
 }
 
 .project:hover {
-  transform: translateY(-5px); /* subtle lift */
-  border-color: rgba(255,255,255,0.6);
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.project:hover img {
+  transform: scale(1.02);
+  transition: transform 0.4s ease;
 }
 
 /* Text overlay on images */
@@ -218,11 +225,19 @@ img {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-  color: #fff;
-  text-align: center;
-  padding: 15px 10px;
-  font-weight: 600;
+  padding: 20px 15px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: left;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.4),
+    transparent
+  );
+
   opacity: 0;
   transition: opacity 0.3s ease;
 }
