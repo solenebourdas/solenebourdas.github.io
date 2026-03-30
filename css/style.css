@@ -184,21 +184,20 @@ img {
 /* ===================================================== */
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 250px);
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  width: fit-content;
-  margin: 50px auto;
+  gap: 30px;
 }
 
 .project {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
   cursor: pointer;
   transition: transform 0.25s ease, border-color 0.25s ease;
   width: 250px;
+  background: black;
 }
 
 .project img {
