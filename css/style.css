@@ -185,20 +185,11 @@ img {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 250px); /* fixed width cards */
   gap: 30px;
-  justify-items: center; /* centers last row */
+  justify-content: center; /* THIS centers the whole grid */
 }
 
-.project:nth-child(4) {
-  grid-column: 1 / 3;
-  justify-self: end;
-}
-
-.project:nth-child(5) {
-  grid-column: 3;
-  justify-self: start;
-}
 
 .project {
   position: relative;
