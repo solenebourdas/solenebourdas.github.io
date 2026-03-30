@@ -878,7 +878,6 @@ footer {
   grid-template-rows: 260px 260px;
   gap: 25px;
   margin-top: 40px;
-  transform: translateX(20px);
 }
 
 .card {
