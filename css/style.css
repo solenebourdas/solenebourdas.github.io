@@ -953,10 +953,15 @@ footer {
 }
 
 
-
+.gallery-page {
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 30px;
+}
 
 model-viewer {
   margin-top: 40px;
+  width: 100%;
   border-radius: 20px;
   background: radial-gradient(circle at center, #111 0%, #000 100%);
   box-shadow: 
