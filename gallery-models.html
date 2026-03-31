@@ -4,12 +4,56 @@
   <meta charset="UTF-8">
   <title>Gallery - Solène Bourdas</title>
   <link rel="stylesheet" href="css/style.css">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  
+  <!-- Three.js libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.164.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.164.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.164.0/examples/js/controls/OrbitControls.js"></script>
+  
+  <style>
+    /* Optional inline CSS for demo */
+    .gallery-page {
+      max-width: 1400px;
+      margin: 30px auto;
+      padding: 0 30px;
+    }
+
+    #three-container {
+      width: 100%;
+      height: 70vh;
+      margin-top: 30px;
+      border-radius: 20px;
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
+      box-shadow: 
+        0 20px 50px rgba(0,0,0,0.7),
+        0 0 40px rgba(255,255,255,0.05);
+    }
+
+    #toggleAntBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #0a0a0a;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    #toggleAntBtn:hover {
+      background: #111;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      #three-container {
+        height: 50vh;
+      }
+    }
+  </style>
 </head>
 <body>
-  
-  
-  <!-- Header / Menu -->
+
 <header>
   <h1>Solène Bourdas</h1>
   <nav>
@@ -23,61 +67,80 @@
 </header>
 
 <main class="gallery-page">
-    <a href="Gallery.html" class="back-link">← Back to Gallery</a>
+  <a href="Gallery.html" class="back-link">← Back to Gallery</a>
 
- <div class="model-container" style="position: relative; width: 100%; height: 70vh;">
-  <!-- Ant model -->
-  <model-viewer
-    id="antModel"
-    src="Models/ant.glb"
-    alt="Ant"
-    auto-rotate
-    camera-controls
-    shadow-intensity="1"
-    environment-image="neutral"
-    style="position: absolute; width: 100%; height: 100%;">
-  </model-viewer>
+  <div id="three-container"></div>
+  <button id="toggleAntBtn">Hide Ant</button>
+</main>
 
-  <!-- Gut model -->
-  <model-viewer
-    id="gutModel"
-    src="Models/gut1.glb"
-    alt="Gut"
-    auto-rotate
-    camera-controls
-    shadow-intensity="1"
-    environment-image="neutral"
-    style="position: absolute; width: 100%; height: 100%;">
-  </model-viewer>
-</div>
+<footer>
+  <p>&copy; 2026 Solène Bourdas</p>
+</footer>
 
-<button id="toggleAntBtn">Hide Ant</button>
-
-
- <footer>
-    <p>&copy; 2026 Solène Bourdas</p>
-  </footer>
-
-
-
-  
 <script>
-const ant = document.getElementById('antModel');
-const btn = document.getElementById('toggleAntBtn');
+  const container = document.getElementById('three-container');
 
-btn.addEventListener('click', () => {
-  if (ant.style.display === 'none') {
-    ant.style.display = 'block';
-    btn.textContent = 'Hide Ant';
-  } else {
-    ant.style.display = 'none';
-    btn.textContent = 'Show Ant';
+  // Scene setup
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x000000);
+
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+  camera.position.set(0, 1, 3);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  container.appendChild(renderer.domElement);
+
+  // Controls
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+
+  // Lighting
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+  scene.add(ambientLight);
+  const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+  dirLight.position.set(5, 10, 7.5);
+  scene.add(dirLight);
+
+  // Load models
+  const loader = new THREE.GLTFLoader();
+  let antMesh = null;
+  let gutMesh = null;
+
+  loader.load('Models/ant.glb', gltf => {
+    antMesh = gltf.scene;
+    scene.add(antMesh);
+  });
+
+  loader.load('Models/gut1.glb', gltf => {
+    gutMesh = gltf.scene;
+    scene.add(gutMesh);
+  });
+
+  // Button to toggle ant visibility
+  const btn = document.getElementById('toggleAntBtn');
+  btn.addEventListener('click', () => {
+    if (antMesh) {
+      antMesh.visible = !antMesh.visible;
+      btn.textContent = antMesh.visible ? 'Hide Ant' : 'Show Ant';
+    }
+  });
+
+  // Animation loop
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
   }
-});
-</script>
-  
- 
+  animate();
 
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    camera.aspect = container.clientWidth / container.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.clientWidth, container.clientHeight);
+  });
+</script>
 
 </body>
 </html>
