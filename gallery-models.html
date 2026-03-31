@@ -49,20 +49,16 @@
 const model = document.getElementById('antScene');
 const btn = document.getElementById('toggleAntBtn');
 
-model.addEventListener('load', async () => {
+model.addEventListener('scene-graph-ready', () => {
 
-  await model.updateComplete; // ✅ wait until model is fully ready
-
-  const scene = model.model.scene;
-
-  // 🔍 Debug: print all object names
-  scene.traverse((obj) => {
-    console.log(obj.name);
-  });
+  const scene = model.scene; // ✅ correct & stable
 
   let antMesh = null;
 
+  // 🔍 Find your ant mesh
   scene.traverse((obj) => {
+    console.log(obj.name); // keep for debug
+
     if (obj.name.includes('body')) {
       antMesh = obj;
     }
