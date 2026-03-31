@@ -954,9 +954,10 @@ footer {
 
 
 .gallery-page {
-  max-width: 1400px;
-  margin: 30px auto;
-  padding: 0 30px;
+  max-width: none;       /* allow full width */
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
 }
 
 model-viewer {
