@@ -48,6 +48,11 @@
   const model = document.getElementById('antScene');
 const btn = document.getElementById('toggleAntBtn');
 
+   model.addEventListener('load', () => {
+  model.scene.traverse((obj) => {
+    console.log(obj.name);
+ 
+
 // Wait until model is loaded
 model.addEventListener('load', () => {
   const scene = model.scene; // three.js scene
