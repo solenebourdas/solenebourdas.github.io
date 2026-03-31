@@ -45,20 +45,22 @@
   </footer>
 
 
-  <script>
+<script>
 const model = document.getElementById('antScene');
 const btn = document.getElementById('toggleAntBtn');
 
 model.addEventListener('load', () => {
 
-  // 🔍 DEBUG: print all object names
-  model.scene.traverse((obj) => {
+  const scene = model.model.scene; // ✅ correct access
+
+  // 🔍 Debug: list all object names
+  scene.traverse((obj) => {
     console.log(obj.name);
   });
 
   let antMesh = null;
 
-  model.scene.traverse((obj) => {
+  scene.traverse((obj) => {
     if (obj.name.includes('body')) {
       antMesh = obj;
     }
