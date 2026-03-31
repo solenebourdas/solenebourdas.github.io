@@ -882,10 +882,10 @@ footer {
 
 .card {
   flex: 1;
-  height: 260px;
+  height: 300px;
   position: relative;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 10px;
   text-decoration: none;
 }
 
