@@ -46,10 +46,15 @@
 
 
 <script>
+console.log("JS is running");
+
 const model = document.getElementById('antScene');
 const btn = document.getElementById('toggleAntBtn');
 
+console.log("Waiting for model...");
+
 model.addEventListener('load', () => {
+  console.log("Model loaded!");
 
   function waitForScene() {
     if (!model.model || !model.model.scene) {
@@ -58,7 +63,6 @@ model.addEventListener('load', () => {
     }
 
     const scene = model.model.scene;
-
     console.log("Scene ready!");
 
     // 🔍 Print all object names
