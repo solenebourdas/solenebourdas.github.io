@@ -49,41 +49,52 @@
 const model = document.getElementById('antScene');
 const btn = document.getElementById('toggleAntBtn');
 
-model.addEventListener('scene-graph-ready', () => {
+model.addEventListener('load', () => {
 
-  const scene = model.scene; // ✅ correct & stable
-
-  let antMesh = null;
-
-  // 🔍 Find your ant mesh
-  scene.traverse((obj) => {
-    console.log(obj.name); // keep for debug
-
-    if (obj.name.includes('body')) {
-      antMesh = obj;
+  function waitForScene() {
+    if (!model.model || !model.model.scene) {
+      requestAnimationFrame(waitForScene);
+      return;
     }
-  });
 
-  if (!antMesh) {
-    console.warn("Ant mesh not found!");
-    return;
-  }
+    const scene = model.model.scene;
 
-  let visible = true;
+    console.log("Scene ready!");
 
-  btn.addEventListener('click', () => {
-    visible = !visible;
-
-    antMesh.traverse((child) => {
-      child.visible = visible;
+    // 🔍 Print all object names
+    scene.traverse((obj) => {
+      console.log(obj.name);
     });
 
-    btn.textContent = visible ? 'Hide Ant' : 'Show Ant';
-  });
+    let antMesh = null;
 
+    scene.traverse((obj) => {
+      if (obj.name.includes('body')) {
+        antMesh = obj;
+      }
+    });
+
+    if (!antMesh) {
+      console.warn("Ant mesh not found!");
+      return;
+    }
+
+    let visible = true;
+
+    btn.addEventListener('click', () => {
+      visible = !visible;
+
+      antMesh.traverse((child) => {
+        child.visible = visible;
+      });
+
+      btn.textContent = visible ? 'Hide Ant' : 'Show Ant';
+    });
+  }
+
+  waitForScene();
 });
 </script>
-
 
 </body>
 </html>
