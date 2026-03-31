@@ -56,45 +56,45 @@ console.log("Waiting for model...");
 model.addEventListener('load', () => {
   console.log("Model loaded!");
 
-  function waitForScene() {
-    if (!model.model || !model.model.scene) {
-      requestAnimationFrame(waitForScene);
-      return;
-    }
-
-    const scene = model.model.scene;
-    console.log("Scene ready!");
-
-    // 🔍 Print all object names
-    scene.traverse((obj) => {
-      console.log(obj.name);
-    });
-
-    let antMesh = null;
-
-    scene.traverse((obj) => {
-      if (obj.name.includes('body')) {
-        antMesh = obj;
-      }
-    });
-
-    if (!antMesh) {
-      console.warn("Ant mesh not found!");
-      return;
-    }
-
-    let visible = true;
-
-    btn.addEventListener('click', () => {
-      visible = !visible;
-
-      antMesh.traverse((child) => {
-        child.visible = visible;
-      });
-
-      btn.textContent = visible ? 'Hide Ant' : 'Show Ant';
-    });
+ function waitForScene() {
+  if (!model.scene) {
+    requestAnimationFrame(waitForScene);
+    return;
   }
+
+  const scene = model.scene;
+  console.log("Scene ready!");
+
+  // 🔍 Print all object names
+  scene.traverse((obj) => {
+    console.log(obj.name);
+  });
+
+  let antMesh = null;
+
+  scene.traverse((obj) => {
+    if (obj.name.includes('body')) {
+      antMesh = obj;
+    }
+  });
+
+  if (!antMesh) {
+    console.warn("Ant mesh not found!");
+    return;
+  }
+
+  let visible = true;
+
+  btn.addEventListener('click', () => {
+    visible = !visible;
+
+    antMesh.traverse((child) => {
+      child.visible = visible;
+    });
+
+    btn.textContent = visible ? 'Hide Ant' : 'Show Ant';
+  });
+}
 
   waitForScene();
 });
