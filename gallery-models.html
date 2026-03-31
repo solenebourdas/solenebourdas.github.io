@@ -25,80 +25,59 @@
 <main class="gallery-page">
     <a href="Gallery.html" class="back-link">← Back to Gallery</a>
 
-   <model-viewer
-  id="antScene"
-  src="Models/ant_with_gut.glb"
-  alt="Ant with gut"
-  auto-rotate
-  camera-controls
-  shadow-intensity="1"
-  environment-image="neutral"
-  style="width:100%; height:70vh;">
-</model-viewer>
+ <div class="model-container" style="position: relative; width: 100%; height: 70vh;">
+  <!-- Ant model -->
+  <model-viewer
+    id="antModel"
+    src="Models/ant.glb"
+    alt="Ant"
+    auto-rotate
+    camera-controls
+    shadow-intensity="1"
+    environment-image="neutral"
+    style="position: absolute; width: 100%; height: 100%;">
+  </model-viewer>
+
+  <!-- Gut model -->
+  <model-viewer
+    id="gutModel"
+    src="Models/gut1.glb"
+    alt="Gut"
+    auto-rotate
+    camera-controls
+    shadow-intensity="1"
+    environment-image="neutral"
+    style="position: absolute; width: 100%; height: 100%;">
+  </model-viewer>
+</div>
 
 <button id="toggleAntBtn">Hide Ant</button>
-   
-  </main>
 
-  <footer>
+
+ <footer>
     <p>&copy; 2026 Solène Bourdas</p>
   </footer>
 
 
-<script>
-console.log("JS is running");
 
-const model = document.getElementById('antScene');
+  
+<script>
+const ant = document.getElementById('antModel');
 const btn = document.getElementById('toggleAntBtn');
 
-console.log("Waiting for model...");
-
-model.addEventListener('load', () => {
-  console.log("Model loaded!");
-
- function waitForScene() {
-  if (!model.scene) {
-    requestAnimationFrame(waitForScene);
-    return;
+btn.addEventListener('click', () => {
+  if (ant.style.display === 'none') {
+    ant.style.display = 'block';
+    btn.textContent = 'Hide Ant';
+  } else {
+    ant.style.display = 'none';
+    btn.textContent = 'Show Ant';
   }
-
-  const scene = model.scene;
-  console.log("Scene ready!");
-
-  // 🔍 Print all object names
-  scene.traverse((obj) => {
-    console.log(obj.name);
-  });
-
-  let antMesh = null;
-
-  scene.traverse((obj) => {
-    if (obj.name.includes('body')) {
-      antMesh = obj;
-    }
-  });
-
-  if (!antMesh) {
-    console.warn("Ant mesh not found!");
-    return;
-  }
-
-  let visible = true;
-
-  btn.addEventListener('click', () => {
-    visible = !visible;
-
-    antMesh.traverse((child) => {
-      child.visible = visible;
-    });
-
-    btn.textContent = visible ? 'Hide Ant' : 'Show Ant';
-  });
-}
-
-  waitForScene();
 });
 </script>
+  
+ 
+
 
 </body>
 </html>
