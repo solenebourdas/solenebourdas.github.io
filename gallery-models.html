@@ -49,11 +49,13 @@
 const model = document.getElementById('antScene');
 const btn = document.getElementById('toggleAntBtn');
 
-model.addEventListener('load', () => {
+model.addEventListener('load', async () => {
 
-  const scene = model.model.scene; // ✅ correct access
+  await model.updateComplete; // ✅ wait until model is fully ready
 
-  // 🔍 Debug: list all object names
+  const scene = model.model.scene;
+
+  // 🔍 Debug: print all object names
   scene.traverse((obj) => {
     console.log(obj.name);
   });
