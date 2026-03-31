@@ -21,44 +21,62 @@
   </nav>
 </header>
 
-  <!-- Main Content -->
- <main class="gallery-page">
+<main class="gallery-page">
+    <a href="Gallery.html" class="back-link">← Back to Gallery</a>
 
-  <a href="Gallery.html" class="back-link">← Back to Gallery</a>
-<div class="model-container">
-  <model-viewer
-    id="antModel"
-    src="Models/ant.glb"
-    alt="3D ant"
-    auto-rotate
-    camera-controls
-    shadow-intensity="1"
-    exposure="1"
-    environment-image="neutral"
-    style="width: 100%; height: 70vh; position:absolute;">
-  </model-viewer>
+    <div class="model-container">
+      <model-viewer
+        id="antModel"
+        src="Models/ant.glb"
+        alt="3D ant"
+        auto-rotate
+        camera-controls
+        shadow-intensity="1"
+        exposure="1"
+        environment-image="neutral"
+        style="width: 100%; height: 70vh; position:absolute;">
+      </model-viewer>
 
-  <model-viewer
-    id="gutModel"
-    src="Models/gut1.glb"
-    alt="Ant gut"
-    auto-rotate
-    camera-controls
-    shadow-intensity="1"
-    exposure="1"
-    environment-image="neutral"
-    style="width: 100%; height: 70vh; position:absolute; display:none;">
-  </model-viewer>
-</div>
+      <model-viewer
+        id="gutModel"
+        src="Models/gut1.glb"
+        alt="Ant gut"
+        auto-rotate
+        camera-controls
+        shadow-intensity="1"
+        exposure="1"
+        environment-image="neutral"
+        style="width: 100%; height: 70vh; position:absolute; display:none;">
+      </model-viewer>
+    </div>
 
-<button id="toggleBtn">Show Gut Only</button>
+    <button id="toggleBtn">Show Gut Only</button>
+ 
+  </main>
 
-</main>
-
-    <!-- Footer -->
   <footer>
     <p>&copy; 2026 Solène Bourdas</p>
   </footer>
-  
+
+ <script>
+    const ant = document.getElementById('antModel');
+    const gut = document.getElementById('gutModel');
+    const btn = document.getElementById('toggleBtn');
+
+    btn.addEventListener('click', () => {
+      if (gut.style.display === 'none') {
+        ant.style.display = 'none';
+        gut.style.display = 'block';
+        btn.textContent = "Show Ant";
+      } else {
+        ant.style.display = 'block';
+        gut.style.display = 'none';
+        btn.textContent = "Show Gut Only";
+      }
+    });
+  </script>
+
+
+
 </body>
 </html>
