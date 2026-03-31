@@ -38,9 +38,6 @@
 
 <button id="toggleAntBtn">Hide Ant</button>
    
-
-    <button id="toggleBtn">Show Gut Only</button>
- 
   </main>
 
   <footer>
@@ -54,8 +51,8 @@ const btn = document.getElementById('toggleAntBtn');
 // Wait until model is loaded
 model.addEventListener('load', () => {
   const scene = model.scene; // three.js scene
-  const antMesh = scene.getObjectByName('Ant'); // must match the object name in Blender
-  const gutMesh = scene.getObjectByName('Gut');
+  const antMesh = scene.getObjectByName('Contour Mesh Of entire body'); // must match the object name in Blender
+  const gutMesh = scene.getObjectByName('Contour Mesh Of entire ant gut');
 
   btn.addEventListener('click', () => {
     antMesh.visible = !antMesh.visible;
