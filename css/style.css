@@ -870,25 +870,22 @@ footer {
   text-align: center;     /* aligns nicely toward image */
 }
 
+
+
+
 /* GALLERY */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px 250px;
-  gap: 25px;
-  margin-top: 40px;
+.gallery-row {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
 }
 
-/* TOP WIDE IMAGE */
-.card.wide {
-  grid-column: span 2;
-}
-
-/* GENERAL CARD */
 .card {
+  flex: 1;
+  height: 260px;
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 18px;
   text-decoration: none;
 }
 
@@ -897,11 +894,14 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: brightness(0.9);
 }
 
+/* HOVER EFFECT */
 .card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  filter: brightness(1);
 }
 
 /* TEXT OVERLAY */
@@ -909,8 +909,8 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 20px;
+  padding: 18px;
   color: white;
-  font-size: 22px;
+  font-size: 20px;
   background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
 }
