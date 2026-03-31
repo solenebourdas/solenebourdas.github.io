@@ -961,6 +961,7 @@ footer {
   box-sizing: border-box; /* ensures padding doesn’t overflow */
 }
 
+
 model-viewer {
   margin-top: 40px;
   width: 100%;
