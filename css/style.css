@@ -880,6 +880,7 @@ footer {
   margin-top: 0px;
 }
 
+/* CARD (same as .project) */
 .card {
   flex: 1;
   height: 300px;
@@ -887,21 +888,57 @@ footer {
   overflow: hidden;
   border-radius: 10px;
   text-decoration: none;
+  background: #0a0a0a;
+  cursor: pointer;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: transform 0.3s ease, 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease;
+
+  /* Entrance animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
 }
+
+/* Staggered animation */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
 
 /* IMAGE */
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease, filter 0.5s ease;
-  filter: brightness(0.9);
+  display: block;
+
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.95) contrast(1.05);
 }
 
-/* HOVER EFFECT */
+/* HOVER (same as project) */
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.25);
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.6),
+    0 0 20px rgba(255,255,255,0.08);
+}
+
 .card:hover img {
-  transform: scale(1.08);
-  filter: brightness(1);
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* TEXT OVERLAY */
