@@ -961,9 +961,15 @@ footer {
 }
 
 .models-page {
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;   /* keeps it elegant */
+  margin: 0 auto;      /* centered */
   padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+main.models-page {
+  max-width: none;     /* 🔥 THIS is the key fix */
 }
 
 /* MODEL VIEWER CONTAINER */
