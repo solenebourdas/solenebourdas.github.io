@@ -954,7 +954,7 @@ footer {
 
 
 .gallery-page {
-  max-width: 1400px;   /* keeps a limit on super-wide screens */
+  max-width: 1000px;   /* keeps a limit on super-wide screens */
   margin: 0 auto;
   padding: 40px 60px;   /* top/bottom 40px, left/right 60px */
   box-sizing: border-box; /* ensures padding doesn’t overflow */
