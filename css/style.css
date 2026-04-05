@@ -954,8 +954,7 @@ footer {
 
 
 .gallery-page {
-  max-width: 1000px;   /* keeps a limit on super-wide screens */
-  width: 100%;
+  max-width: 1400px;   /* keeps a limit on super-wide screens */
   margin: 0 auto;
   padding: 40px 60px;   /* top/bottom 40px, left/right 60px */
   box-sizing: border-box; /* ensures padding doesn’t overflow */
@@ -965,9 +964,6 @@ footer {
 model-viewer { 
   margin-top: 40px; 
   width: 100%;
-  border-radius: 20px;
-background: radial-gradient(circle at center, #111 0%, #000 100%);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 40px rgba(255,255,255,0.05); 
   border: 1px solid #888; 
   border-radius: 0;
   box-sizing: border-box; } 
