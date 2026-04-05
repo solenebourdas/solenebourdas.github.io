@@ -962,28 +962,21 @@ footer {
 }
 
 /* MODEL VIEWER CONTAINER */
-.model-container {
+model-viewer { 
+  margin-top: 40px; 
   width: 100%;
-  height: 500px; /* matches your HTML */
-  margin-top: 40px;
-}
-
-/* MODEL VIEWER */
-model-viewer {
-  width: 100%;
-  height: 100%;
-  display: block;
-
   border-radius: 20px;
-  background: radial-gradient(circle at center, #111 0%, #000 100%);
-  
-  box-shadow: 
-    0 20px 50px rgba(0,0,0,0.7),
-    0 0 40px rgba(255,255,255,0.05);
+background: radial-gradient(circle at center, #111 0%, #000 100%);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 40px rgba(255,255,255,0.05); 
+  border: 1px solid #888; 
+  border-radius: 0;
+  box-sizing: border-box; } 
 
-  border: 1px solid #888;
-  box-sizing: border-box;
-}
+.model-container { 
+  position: relative; 
+  width: 100%; 
+  height: 70vh;
+  margin-top: 30px; } 
 
 
 /* MOBILE */
