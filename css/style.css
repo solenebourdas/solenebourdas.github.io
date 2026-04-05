@@ -960,6 +960,12 @@ footer {
   box-sizing: border-box; /* ensures padding doesn’t overflow */
 }
 
+.models-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 60px;
+}
+
 /* MODEL VIEWER CONTAINER */
 model-viewer { 
   margin-top: 40px; 
