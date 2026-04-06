@@ -969,8 +969,8 @@ footer {
 
 /* MODEL VIEWER CONTAINER */
 model-viewer { 
-  margin-top: 40px; 
-  width: 100%;
+  margin-top: 20px; 
+  width: 70%;
   border: 1px solid #888; 
   border-radius: 0;
   box-sizing: border-box; } 
@@ -987,4 +987,11 @@ model-viewer {
   .model-container {
     height: 350px;
   }
+}
+
+.cv-intro2 {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
