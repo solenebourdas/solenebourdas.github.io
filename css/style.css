@@ -1024,7 +1024,7 @@ model-viewer:active {
 .gallery-pictures-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px; /* smaller gap = bigger images */
+  gap: 30px; /* smaller gap = bigger images */
 }
 
 /* Each image */
@@ -1039,6 +1039,7 @@ model-viewer:active {
   height: 350px; /* bigger images */
   object-fit: cover;
   display: block;
+  border-radius: 0;
 }
 
 /* Overlay text */
