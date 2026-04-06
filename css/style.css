@@ -960,50 +960,56 @@ footer {
   box-sizing: border-box; /* ensures padding doesn’t overflow */
 }
 
+
+
+/* Container for the page */
 .models-page {
-  max-width: 1000px; 
-  width: 100%; /* keeps it elegant */
-  margin: 30px auto;      /* centered */
+  max-width: 1000px;
+  margin: 30px auto;
   padding: 0 20px;
+  text-align: center; /* centers text and models */
 }
 
-/* MODEL VIEWER CONTAINER */
-model-viewer { 
-  margin-top: 20px; 
-  width: 50%;
-  border: 1px solid #888; 
-  border-radius: 0;
-  box-sizing: border-box; } 
+/* Intro paragraph */
+.cv-intro2 {
+  width: 90%;
+  margin: 20px auto 10px auto;
+}
 
-.model-container { 
-  position: relative; 
-  width: 100%; 
-  height: 70vh;
-  margin-top: 30px; } 
+/* Model title */
+.model-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 20px 0 15px 0;
+  color: #333;
+}
 
+/* Model container */
+.model-container {
+  width: 100%;
+  max-width: 600px; /* limits model width */
+  margin: 0 auto;   /* centers container */
+}
 
-/* MOBILE */
+/* Model viewer itself */
+model-viewer {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  cursor: grab;
+}
+
+model-viewer:active {
+  cursor: grabbing;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .model-container {
+  model-viewer {
     height: 350px;
   }
 }
-
-.cv-intro2 {
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  margin-top: 20px;
-}
-
-.model-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    margin: 20px 0 10px 0;
-    color: #333; /* dark gray, change as you like */
-  }
-
 
 model-viewer:active {
     cursor: grabbing;             /* when dragging */
