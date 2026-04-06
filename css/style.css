@@ -1024,7 +1024,7 @@ model-viewer:active {
 .gallery-pictures-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px; /* smaller gap = bigger images */
+  gap: 40px; /* smaller gap = bigger images */
 }
 
 /* Each image */
