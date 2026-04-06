@@ -1048,8 +1048,9 @@ model-viewer:active {
   transform: scale(1.05);
 }
 
-/* Overlay (hidden by default) */
-.overlay {
+
+/* Overlay text container */
+.overlay-pictures {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1057,14 +1058,25 @@ model-viewer:active {
   padding: 10px;
   background: rgba(0, 0, 0, 0.6);
   color: white;
-  font-size: 0.9rem;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-/* Show text on hover */
+/* Show on hover */
 .gallery-pictures-item:hover .overlay {
   opacity: 1;
+}
+
+/* Species name (main line) */
+.overlay-pictures .species {
+  font-size: 1rem;
+  font-style: italic; /* scientific style */
+}
+
+/* Location/date (second line) */
+.overlay-pictures .location {
+  font-size: 0.8rem;
+  opacity: 0.85;
 }
 
 /* Mobile: 2 per row */
