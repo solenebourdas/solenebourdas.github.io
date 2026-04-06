@@ -970,7 +970,7 @@ footer {
 /* MODEL VIEWER CONTAINER */
 model-viewer { 
   margin-top: 20px; 
-  width: 70%;
+  width: 50%;
   border: 1px solid #888; 
   border-radius: 0;
   box-sizing: border-box; } 
