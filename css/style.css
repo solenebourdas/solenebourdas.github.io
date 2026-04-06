@@ -965,9 +965,9 @@ footer {
 /* Container for the page */
 .models-page {
   max-width: 1000px;
+  width: 100%;
   margin: 30px auto;
   padding: 0 20px;
-  text-align: center; /* centers text and models */
 }
 
 /* Intro paragraph */
@@ -978,7 +978,7 @@ footer {
 
 /* Model title */
 .model-title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   margin: 20px 0 15px 0;
   color: #333;
@@ -995,9 +995,10 @@ footer {
 model-viewer {
   width: 100%;
   height: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   cursor: grab;
+  border: 1px solid #888; 
+  border-radius: 0; 
+  box-sizing: border-box;
 }
 
 model-viewer:active {
@@ -1011,7 +1012,7 @@ model-viewer:active {
   }
 }
 
-model-viewer:active {
-    cursor: grabbing;             /* when dragging */
-  }
+
+
+
 
