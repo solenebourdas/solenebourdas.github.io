@@ -1170,7 +1170,7 @@ model-viewer:active {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 0px; /* optional small rounding */
+  border-radius: 3px; /* optional small rounding */
 }
 
 /* Mobile responsiveness */
