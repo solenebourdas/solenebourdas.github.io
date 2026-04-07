@@ -1138,7 +1138,7 @@ model-viewer:active {
 /* Page layout */
 .talks-page {
   max-width: 1000px;
-  margin: 80px auto 20px auto;
+  margin: 70px auto 0px auto;
   padding: 0 20px;
 }
 
