@@ -1137,10 +1137,9 @@ model-viewer:active {
 
 /* Page layout */
 .talks-page {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
-  font-family: Arial, sans-serif;
 }
 
 /* Each section (oral/poster) with image on right */
@@ -1171,7 +1170,7 @@ model-viewer:active {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px; /* optional small rounding */
+  border-radius: 0px; /* optional small rounding */
 }
 
 /* Mobile responsiveness */
