@@ -1134,7 +1134,7 @@ model-viewer:active {
 
 
 .talks-page {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
@@ -1172,7 +1172,7 @@ model-viewer:active {
 }
 
 .talk-image {
-  flex: 0 0 220px;
+  flex: 0 0 300px;
   width: 100%;
 }
 
@@ -1183,7 +1183,7 @@ model-viewer:active {
 }
 
 .talk-poster {
-  flex: 0 0 220px;
+  flex: 0 0 300px;
   width: 100%;
 }
 
