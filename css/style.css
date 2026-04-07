@@ -1158,19 +1158,17 @@ model-viewer:active {
 /* Talks row */
 .talk-item {
   display: flex;
-  align-items: flex-start;
-  gap: 25px;
+  align-items: flex-start; /* top-align image and text */
+  gap: 25px; /* space between text and image */
   margin-bottom: 30px;
 }
 
-/* Text column */
 .talk-text {
-  flex: 1;
+  flex: 1; /* take all available width on left */
 }
 
-/* Image column */
 .talk-image {
-  flex: 0 0 220px;
+  flex: 0 0 400px; /* fixed width for image on right */
 }
 
 .talk-image img {
@@ -1181,7 +1179,7 @@ model-viewer:active {
 
 /* Mobile: stack vertically */
 @media (max-width: 768px) {
-  .talk-item, .talk-section {
+  .talk-item {
     flex-direction: column;
   }
   .talk-image {
