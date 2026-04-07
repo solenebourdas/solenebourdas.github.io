@@ -1084,3 +1084,49 @@ model-viewer:active {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+/* Page */
+.drawings-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Title */
+.drawings-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Grid: 2 per row */
+.drawings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* more space = cleaner look */
+}
+
+/* Each drawing */
+.drawing-item img {
+  width: 100%;
+  height: auto; /* keeps proportions (important for drawings) */
+  display: block;
+}
+
+/* Caption */
+.drawing-caption {
+  margin-top: 8px;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left; /* or center if you prefer */
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 768px) {
+  .drawings-grid {
+    grid-template-columns: 1fr;
+  }
+}
