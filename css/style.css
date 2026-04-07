@@ -196,7 +196,6 @@ img {
 .project:nth-child(4) { animation-delay: 0.4s; }
 .project:nth-child(5) { animation-delay: 0.5s; }
 
-
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -228,7 +227,7 @@ img {
   filter: brightness(1.05);
 }
 
-/* Text overlay on images */
+/* Text overlay on images — always visible now */
 .title-overlay {
   position: absolute;
   bottom: 0;
@@ -247,12 +246,9 @@ img {
     transparent
   );
 
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project:hover .title-overlay {
-  opacity: 1;
+  opacity: 1; /* always visible */
+  pointer-events: none; /* clicks pass through overlay */
+  transition: none; /* remove hover fade */
 }
 
 
