@@ -1110,9 +1110,10 @@ model-viewer:active {
 
 /* Each drawing */
 .drawing-item img {
-  width: 100%;
+  width: 70%;
   height: auto; /* keeps proportions (important for drawings) */
   display: block;
+  border-radius: 0;
 }
 
 /* Caption */
@@ -1120,7 +1121,7 @@ model-viewer:active {
   margin-top: 8px;
   font-style: italic;
   font-size: 0.95rem;
-  color: #333;
+  color: #888;
   text-align: left; /* or center if you prefer */
 }
 
