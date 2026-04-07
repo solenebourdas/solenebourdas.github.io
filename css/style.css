@@ -1133,47 +1133,44 @@ model-viewer:active {
 }
 
 
+
+
+/* Main page width */
 .talks-page {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-.talks-page h2 {
-  text-align: center;
+/* Section title row */
+.talk-section {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  flex: 1; /* left column */
+  margin: 0;
+}
+
+/* Talks row */
+.talk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
   margin-bottom: 30px;
 }
 
-.talks-page h3 {
-  margin-top: 30px;
-}
-
-.talks-list {
-  list-style: none;
-  padding: 0;
-}
-
-.talks-list li {
-  margin-bottom: 15px;
-  line-height: 1.5;
-}
-
-.talk-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  margin-bottom: 40px;
-}
-
+/* Text column */
 .talk-text {
   flex: 1;
-  line-height: 1.5;
 }
 
+/* Image column */
 .talk-image {
-  flex: 0 0 300px;
-  width: 100%;
+  flex: 0 0 220px;
 }
 
 .talk-image img {
@@ -1182,15 +1179,12 @@ model-viewer:active {
   display: block;
 }
 
-.talk-poster {
-  flex: 0 0 300px;
-  width: 100%;
-}
-
-/* Mobile */
+/* Mobile: stack vertically */
 @media (max-width: 768px) {
-  .talk-item {
+  .talk-item, .talk-section {
     flex-direction: column;
-    align-items: flex-start;
   }
-
+  .talk-image {
+    width: 100%;
+  }
+}
