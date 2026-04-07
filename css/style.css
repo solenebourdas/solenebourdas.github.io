@@ -1137,8 +1137,8 @@ model-viewer:active {
 
 /* Page layout */
 .talks-page {
-  max-width: 900px;
-  margin: 40px auto;
+  max-width: 1000px;
+  margin: 80px auto 20px auto;
   padding: 0 20px;
 }
 
@@ -1146,7 +1146,7 @@ model-viewer:active {
 .talks-with-image {
   display: flex;
   align-items: flex-start; /* top-align image and text */
-  gap: 25px; /* space between columns */
+  gap: 30px; /* space between columns */
   margin-bottom: 40px;
 }
 
@@ -1154,6 +1154,7 @@ model-viewer:active {
 .all-talks-text {
   flex: 1;
   line-height: 1.5;
+   padding: 30px;
 }
 
 .all-talks-text h3 {
