@@ -1135,54 +1135,52 @@ model-viewer:active {
 
 
 
-/* Main page width */
+/* Page layout */
 .talks-page {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
+  font-family: Arial, sans-serif;
 }
 
-/* Section title row */
-.talk-section {
-  display: flex;
-  gap: 25px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-.section-title {
-  flex: 1; /* left column */
-  margin: 0;
-}
-
-/* Talks row */
-.talk-item {
+/* Each section (oral/poster) with image on right */
+.talks-with-image {
   display: flex;
   align-items: flex-start; /* top-align image and text */
-  gap: 25px; /* space between text and image */
-  margin-bottom: 30px;
+  gap: 25px; /* space between columns */
+  margin-bottom: 40px;
 }
 
-.talk-text {
-  flex: 1; /* take all available width on left */
+/* LEFT COLUMN: title + all text */
+.all-talks-text {
+  flex: 1;
+  line-height: 1.5;
 }
 
-.talk-image {
-  flex: 0 0 400px; /* fixed width for image on right */
+.all-talks-text h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
 }
 
-.talk-image img {
+/* RIGHT COLUMN: image */
+.talks-right-image {
+  flex: 0 0 300px; /* fixed width for image */
+}
+
+.talks-right-image img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 4px; /* optional small rounding */
 }
 
-/* Mobile: stack vertically */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .talk-item {
+  .talks-with-image {
     flex-direction: column;
   }
-  .talk-image {
+  .talks-right-image {
     width: 100%;
+    margin-top: 15px;
   }
 }
