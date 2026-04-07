@@ -1163,7 +1163,7 @@ model-viewer:active {
 
 /* RIGHT COLUMN: image */
 .talks-right-image {
-  flex: 0 0 300px; /* fixed width for image */
+  flex: 0 0 350px; /* fixed width for image */
 }
 
 .talks-right-image img {
