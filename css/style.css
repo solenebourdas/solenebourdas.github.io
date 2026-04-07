@@ -1131,3 +1131,28 @@ model-viewer:active {
     grid-template-columns: 1fr;
   }
 }
+
+.talks-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.talks-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.talks-page h3 {
+  margin-top: 30px;
+}
+
+.talks-list {
+  list-style: none;
+  padding: 0;
+}
+
+.talks-list li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
