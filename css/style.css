@@ -1154,7 +1154,7 @@ model-viewer:active {
 .all-talks-text {
   flex: 1;
   line-height: 1.5;
-   padding: 30px;
+   padding-left: 30px;
 }
 
 .all-talks-text h3 {
