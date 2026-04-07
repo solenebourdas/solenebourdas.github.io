@@ -66,5 +66,23 @@
     <p>&copy; 2026 Solène Bourdas</p>
   </footer>
 
+<div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img" onclick="event.stopPropagation()">
+</div>
+
+<script>
+function openImage(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeImage() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+
+
+      
 </body>
 </html>
