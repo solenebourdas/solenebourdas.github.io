@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Gallery - Solène Bourdas</title>
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- REQUIRED for model-viewer -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <title>Gallery - Solène Bourdas</title> 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -30,30 +27,97 @@
     Explore and interact with my 3D reconstructions below!
   </p>
 
-  <!-- Add a title for the model -->
-   <p  class="model-title">Remiped crustacean: anterior body & posterior gut (yellow)</p>
+  <p class="model-title">
+    Remiped crustacean: anterior body & posterior gut (yellow)
+  </p>
 
-  <!-- Model viewer container -->
-  <div class="model-container">
-   <model-viewer 
- src="Models/Remiped.glb"
-  auto-rotate
-  camera-controls
-  camera-orbit="0deg 80deg 3m"
-  min-camera-orbit="auto"
-  max-camera-orbit="auto"
-  interaction-prompt="auto"
-  exposure="0.5"
-  shadow-intensity="0.5">
-</model-viewer>
-<!-- closer zoom -->
+  <div class="model-container" id="viewer"></div>
 
+  <div class="controls">
+    <button onclick="toggleGut()">Toggle gut</button>
   </div>
 </main>
     
 <footer>
   <p>&copy; 2026 Solène Bourdas</p>
 </footer>
+
+<!-- THREE.JS SCRIPT -->
+<script type="module">
+import * as THREE from "https://unpkg.com/three@0.160.0/build/three.module.js";
+import { GLTFLoader } from "https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js";
+import { OrbitControls } from "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js";
+
+// Scene
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xffffff);
+
+// Camera
+const camera = new THREE.PerspectiveCamera(45, 1.5, 0.1, 100);
+camera.position.set(0, 1, 3);
+
+// Renderer
+const container = document.getElementById("viewer");
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(container.clientWidth, container.clientHeight);
+container.appendChild(renderer.domElement);
+
+// Controls
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+
+// Lights
+const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 1.5);
+scene.add(hemiLight);
+
+const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+dirLight.position.set(5, 5, 5);
+scene.add(dirLight);
+
+// Load model
+let body = null;
+
+const loader = new GLTFLoader();
+loader.load("Models/Remiped2.glb", function (gltf) {
+  const model = gltf.scene;
+  scene.add(model);
+
+  console.log("MODEL STRUCTURE:", model); // 👈 open console!
+
+  // ⚠️ CHANGE THIS NAME based on your Blender object name
+ body = model.getObjectByName("body");
+
+  if (!body) {
+    console.warn("⚠️  mesh not found. Check its name in Blender.");
+  }
+});
+
+// Toggle function (must be global)
+window.toggleGut = function () {
+  if (gut) {
+    gut.visible = !gut.visible;
+  }
+};
+
+// Resize handling
+window.addEventListener("resize", () => {
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+  renderer.setSize(width, height);
+});
+
+// Animation loop
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+
+</script>
 
 </body>
 </html>
