@@ -70,7 +70,7 @@ const container = document.getElementById("viewer");
 
 // Scene
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xf5f5f5);
+scene.background = new THREE.Color(0x000000);
 
 // ✅ Camera uses container AFTER it's declared
 const camera = new THREE.PerspectiveCamera(
@@ -100,20 +100,29 @@ scene.add(dirLight);
 // ✅ Store the part you want to toggle
 let gutMesh = null;
 
-const loader = new GLTFLoader();
+const loader = new GLTFLoader();  // 👈 this line is missing!
 loader.load("Models/Remiped2.glb", function (gltf) {
   const model = gltf.scene;
+
+  // Auto-center the model
+  const box = new THREE.Box3().setFromObject(model);
+  const center = box.getCenter(new THREE.Vector3());
+  model.position.sub(center); // moves model so its center is at origin
+
+  // Auto-fit camera to model size
+  const size = box.getSize(new THREE.Vector3());
+  const maxDim = Math.max(size.x, size.y, size.z);
+  camera.position.set(0, 0, maxDim * 2);
+  controls.update();
+
   scene.add(model);
 
-  // ✅ Log ALL mesh names so you can find the right one
   model.traverse(child => {
-    if (child.isMesh) {
-      console.log("Mesh found:", child.name);
-    }
+    if (child.isMesh) console.log("Mesh found:", child.name);
   });
 
   // ✅ CHANGE "gut" to whatever your Blender object is named
-  gutMesh = model.getObjectByName("gut");
+  gutMesh = model.getObjectByName("body");
   if (!gutMesh) {
     console.warn("⚠️ Mesh 'gut' not found. Check names logged above.");
   }
