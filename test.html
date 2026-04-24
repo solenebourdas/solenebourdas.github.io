@@ -56,11 +56,14 @@ import * as THREE from "https://unpkg.com/three@0.160.0/build/three.module.js";
 import { GLTFLoader } from "https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js";
 
+// ✅ Declare container FIRST
+const container = document.getElementById("viewer");
+
 // Scene
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xffffff);
+scene.background = new THREE.Color(0xf5f5f5);
 
-// Camera
+// ✅ Camera uses container AFTER it's declared
 const camera = new THREE.PerspectiveCamera(
   45,
   container.clientWidth / container.clientHeight,
@@ -70,7 +73,6 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.set(0, 1, 3);
 
 // Renderer
-const container = document.getElementById("viewer");
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(container.clientWidth, container.clientHeight);
 container.appendChild(renderer.domElement);
@@ -82,54 +84,55 @@ controls.enableDamping = true;
 // Lights
 const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 1.5);
 scene.add(hemiLight);
-
 const dirLight = new THREE.DirectionalLight(0xffffff, 1);
 dirLight.position.set(5, 5, 5);
 scene.add(dirLight);
 
-// Load model
-let body = null;
+// ✅ Store the part you want to toggle
+let gutMesh = null;
 
 const loader = new GLTFLoader();
 loader.load("Models/Remiped2.glb", function (gltf) {
   const model = gltf.scene;
   scene.add(model);
 
-  console.log("MODEL STRUCTURE:", model); // 👈 open console!
+  // ✅ Log ALL mesh names so you can find the right one
+  model.traverse(child => {
+    if (child.isMesh) {
+      console.log("Mesh found:", child.name);
+    }
+  });
 
-  // ⚠️ CHANGE THIS NAME based on your Blender object name
- body = model.getObjectByName("body");
-
-  if (!body) {
-    console.warn("⚠️  mesh not found. Check its name in Blender.");
+  // ✅ CHANGE "gut" to whatever your Blender object is named
+  gutMesh = model.getObjectByName("gut");
+  if (!gutMesh) {
+    console.warn("⚠️ Mesh 'gut' not found. Check names logged above.");
   }
 });
 
-// Toggle function (must be global)
+// Toggle (global)
 window.toggleGut = function () {
-  if (body) {
-    body.visible = !body.visible;
+  if (gutMesh) {
+    gutMesh.visible = !gutMesh.visible;
+  } else {
+    console.warn("Gut mesh not loaded yet or name is wrong.");
   }
 };
 
-// Resize handling
+// Resize
 window.addEventListener("resize", () => {
-  const width = container.clientWidth;
-  const height = container.clientHeight;
-
-  camera.aspect = width / height;
+  camera.aspect = container.clientWidth / container.clientHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(width, height);
+  renderer.setSize(container.clientWidth, container.clientHeight);
 });
 
-// Animation loop
+// Animate
 function animate() {
   requestAnimationFrame(animate);
   controls.update();
   renderer.render(scene, camera);
 }
 animate();
-
 </script>
 
 </body>
