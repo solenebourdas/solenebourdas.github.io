@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Solène Bourdas</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- REQUIRED for model-viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+  
+<header>
+  <h1>Solène Bourdas</h1>
+  <nav>
+    <a href="index.html">About me</a> 
+    <a href="Research.html">Research</a> 
+    <a href="CV.html">CV</a> 
+    <a href="Publications.html">Publications</a> 
+    <a href="Communication.html">Communication</a>
+    <a href="Gallery.html">Gallery</a> 
+  </nav>
+</header>
+
+<main class="models-page">
+  <a href="Gallery.html" class="back-link">← Back to Gallery</a>
+
+  <p class="cv-intro2">
+    Explore and interact with my 3D reconstructions below!
+  </p>
+
+  <!-- Add a title for the model -->
+   <p  class="model-title">Remiped crustacean: anterior body & posterior gut (yellow)</p>
+
+  <!-- Model viewer container -->
+  <div class="model-container">
+   <model-viewer 
+ src="Models/Remiped.glb"
+  auto-rotate
+  camera-controls
+  camera-orbit="0deg 80deg 3m"
+  min-camera-orbit="auto"
+  max-camera-orbit="auto"
+  interaction-prompt="auto"
+  exposure="0.5"
+  shadow-intensity="0.5">
+</model-viewer>
+<!-- closer zoom -->
+
+  </div>
+</main>
+    
+<footer>
+  <p>&copy; 2026 Solène Bourdas</p>
+</footer>
+
+</body>
+</html>
