@@ -4,7 +4,15 @@
     <meta charset="UTF-8"> 
     <title>Gallery - Solène Bourdas</title> 
     <link rel="stylesheet" href="css/style.css">
-</head>
+
+ <style>
+  .model-container {
+    width: 100%;
+    height: 600px; /* 👈 THIS FIXES IT */
+  }
+</style> 
+  
+  </head>
 
 <body>
   
@@ -53,7 +61,12 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff);
 
 // Camera
-const camera = new THREE.PerspectiveCamera(45, 1.5, 0.1, 100);
+const camera = new THREE.PerspectiveCamera(
+  45,
+  container.clientWidth / container.clientHeight,
+  0.1,
+  100
+);
 camera.position.set(0, 1, 3);
 
 // Renderer
@@ -94,8 +107,8 @@ loader.load("Models/Remiped2.glb", function (gltf) {
 
 // Toggle function (must be global)
 window.toggleGut = function () {
-  if (gut) {
-    gut.visible = !gut.visible;
+  if (body) {
+    body.visible = !body.visible;
   }
 };
 
