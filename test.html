@@ -11,7 +11,7 @@
 
       .model-container {
         width: 100%;
-        height: 560px;
+        height: 400px;
         position: relative;
         cursor: crosshair;
         background: #0d0d0d;
@@ -248,7 +248,7 @@
     <div class="viewer-controls">
       <button class="viewer-btn active" id="toggleBtn" onclick="toggleGut()">
         <span class="btn-dot" id="btnDot"></span>
-        Posterior gut
+        Anterior body
       </button>
 
       <div class="slider-group" id="sliderGroup">
@@ -350,7 +350,7 @@ loader.load(
     });
 
     // ⚠️ Replace "gut" with your actual mesh name from the console
-    gutMesh = model.getObjectByName("gut");
+    gutMesh = model.getObjectByName("body");
     if (!gutMesh) {
       console.warn("⚠️ Mesh not found — check the names logged above.");
     }
