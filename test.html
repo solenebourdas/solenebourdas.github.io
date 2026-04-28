@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="data:,">
 
-    @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap');
-
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap');
 
@@ -65,6 +63,7 @@
         border-top: 1px solid #d8d2c8;
         background: #faf9f6;
         align-items: center;
+        flex-wrap: wrap;
       }
 
       .viewer-btn {
@@ -112,6 +111,67 @@
         opacity: 0.25;
       }
 
+      .slider-group {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        opacity: 1;
+        transition: opacity 0.2s;
+      }
+
+      .slider-group.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      .slider-label {
+        font-family: 'DM Mono', monospace;
+        font-size: 0.67rem;
+        color: #888;
+        letter-spacing: 0.05em;
+      }
+
+      .slider-value {
+        font-family: 'DM Mono', monospace;
+        font-size: 0.67rem;
+        color: #888;
+        width: 2.5rem;
+      }
+
+      .opacity-slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 110px;
+        height: 1px;
+        background: #c8c2b8;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .opacity-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #1a1a1a;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+
+      .opacity-slider::-webkit-slider-thumb:hover {
+        background: #e8c547;
+      }
+
+      .opacity-slider::-moz-range-thumb {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #1a1a1a;
+        cursor: pointer;
+        border: none;
+      }
+
       .viewer-loading {
         position: absolute;
         inset: 0;
@@ -150,7 +210,7 @@
   </head>
 
 <body>
-  
+
 <header>
   <h1>Solène Bourdas</h1>
   <nav>
@@ -190,6 +250,13 @@
         <span class="btn-dot" id="btnDot"></span>
         Posterior gut
       </button>
+
+      <div class="slider-group" id="sliderGroup">
+        <label class="slider-label">Opacity</label>
+        <input type="range" min="0" max="100" value="100" class="opacity-slider" id="opacitySlider" oninput="setGutOpacity(this.value)">
+        <span class="slider-value" id="sliderValue">100%</span>
+      </div>
+
       <button class="viewer-btn secondary" onclick="resetCamera()">
         Reset view
       </button>
@@ -197,7 +264,7 @@
 
   </div>
 </main>
-    
+
 <footer>
   <p>&copy; 2026 Solène Bourdas</p>
 </footer>
@@ -277,12 +344,16 @@ loader.load(
 
     scene.add(model);
 
+    // Log all mesh names so you can find the right one
     model.traverse(child => {
       if (child.isMesh) console.log("Mesh found:", child.name);
     });
 
     // ⚠️ Replace "gut" with your actual mesh name from the console
     gutMesh = model.getObjectByName("gut");
+    if (!gutMesh) {
+      console.warn("⚠️ Mesh not found — check the names logged above.");
+    }
 
     // Hide loading screen
     loadingFill.style.width = "100%";
@@ -300,14 +371,57 @@ loader.load(
   }
 );
 
-// Toggle gut
+// Toggle gut on/off
 let gutVisible = true;
+
 window.toggleGut = function () {
   if (gutMesh) {
     gutVisible = !gutVisible;
-    gutMesh.visible = gutVisible;
+
+    const slider = document.getElementById("opacitySlider");
+    const sliderGroup = document.getElementById("sliderGroup");
+
+    if (gutVisible) {
+      // Restore to whatever the slider currently says
+      const val = slider.value / 100;
+      gutMesh.traverse(child => {
+        if (child.isMesh) {
+          child.material.transparent = val < 1.0;
+          child.material.opacity = val;
+          child.material.needsUpdate = true;
+        }
+      });
+      sliderGroup.classList.remove("disabled");
+    } else {
+      // Hide completely
+      gutMesh.traverse(child => {
+        if (child.isMesh) {
+          child.material.transparent = true;
+          child.material.opacity = 0;
+          child.material.needsUpdate = true;
+        }
+      });
+      sliderGroup.classList.add("disabled");
+    }
+
     document.getElementById("btnDot").classList.toggle("hidden", !gutVisible);
     document.getElementById("toggleBtn").style.color = gutVisible ? "" : "#aaa";
+  }
+};
+
+// Opacity slider
+window.setGutOpacity = function (value) {
+  document.getElementById("sliderValue").textContent = value + "%";
+
+  if (gutMesh && gutVisible) {
+    const val = value / 100;
+    gutMesh.traverse(child => {
+      if (child.isMesh) {
+        child.material.transparent = val < 1.0;
+        child.material.opacity = val;
+        child.material.needsUpdate = true;
+      }
+    });
   }
 };
 
