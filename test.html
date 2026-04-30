@@ -11,7 +11,7 @@
 
       .model-container {
         width: 100%;
-        height: 400px;
+        height: 560px;
         position: relative;
         cursor: crosshair;
         background: #0d0d0d;
@@ -246,14 +246,14 @@
     </div>
 
     <div class="viewer-controls">
-      <button class="viewer-btn active" id="toggleBtn" onclick="toggleGut()">
+      <button class="viewer-btn active" id="toggleBtn" onclick="toggleBody()">
         <span class="btn-dot" id="btnDot"></span>
         Anterior body
       </button>
 
       <div class="slider-group" id="sliderGroup">
         <label class="slider-label">Opacity</label>
-        <input type="range" min="0" max="100" value="100" class="opacity-slider" id="opacitySlider" oninput="setGutOpacity(this.value)">
+        <input type="range" min="0" max="100" value="100" class="opacity-slider" id="opacitySlider" oninput="setBodyOpacity(this.value)">
         <span class="slider-value" id="sliderValue">100%</span>
       </div>
 
@@ -318,7 +318,7 @@ rimLight.position.set(-5, -2, -5);
 scene.add(rimLight);
 
 // Load model
-let gutMesh = null;
+let bodyMesh = null;
 let defaultCameraPos = new THREE.Vector3();
 let defaultTarget = new THREE.Vector3();
 
@@ -334,8 +334,9 @@ loader.load(
     const size = box.getSize(new THREE.Vector3());
     model.position.sub(center);
 
+    // Closer initial zoom
     const maxDim = Math.max(size.x, size.y, size.z);
-    camera.position.set(0, maxDim * 0.4, maxDim * 2.2);
+    camera.position.set(0, maxDim * 0.4, maxDim * 1.2);
     controls.target.set(0, 0, 0);
     controls.update();
 
@@ -344,15 +345,14 @@ loader.load(
 
     scene.add(model);
 
-    // Log all mesh names so you can find the right one
     model.traverse(child => {
       if (child.isMesh) console.log("Mesh found:", child.name);
     });
 
-    // ⚠️ Replace "gut" with your actual mesh name from the console
-    gutMesh = model.getObjectByName("body");
-    if (!gutMesh) {
-      console.warn("⚠️ Mesh not found — check the names logged above.");
+    // Target the body mesh
+    bodyMesh = model.getObjectByName("body");
+    if (!bodyMesh) {
+      console.warn("⚠️ Mesh 'body' not found — check names logged above.");
     }
 
     // Hide loading screen
@@ -371,20 +371,19 @@ loader.load(
   }
 );
 
-// Toggle gut on/off
-let gutVisible = true;
+// Toggle body on/off
+let bodyVisible = true;
 
-window.toggleGut = function () {
-  if (gutMesh) {
-    gutVisible = !gutVisible;
+window.toggleBody = function () {
+  if (bodyMesh) {
+    bodyVisible = !bodyVisible;
 
     const slider = document.getElementById("opacitySlider");
     const sliderGroup = document.getElementById("sliderGroup");
 
-    if (gutVisible) {
-      // Restore to whatever the slider currently says
+    if (bodyVisible) {
       const val = slider.value / 100;
-      gutMesh.traverse(child => {
+      bodyMesh.traverse(child => {
         if (child.isMesh) {
           child.material.transparent = val < 1.0;
           child.material.opacity = val;
@@ -393,8 +392,7 @@ window.toggleGut = function () {
       });
       sliderGroup.classList.remove("disabled");
     } else {
-      // Hide completely
-      gutMesh.traverse(child => {
+      bodyMesh.traverse(child => {
         if (child.isMesh) {
           child.material.transparent = true;
           child.material.opacity = 0;
@@ -404,18 +402,18 @@ window.toggleGut = function () {
       sliderGroup.classList.add("disabled");
     }
 
-    document.getElementById("btnDot").classList.toggle("hidden", !gutVisible);
-    document.getElementById("toggleBtn").style.color = gutVisible ? "" : "#aaa";
+    document.getElementById("btnDot").classList.toggle("hidden", !bodyVisible);
+    document.getElementById("toggleBtn").style.color = bodyVisible ? "" : "#aaa";
   }
 };
 
 // Opacity slider
-window.setGutOpacity = function (value) {
+window.setBodyOpacity = function (value) {
   document.getElementById("sliderValue").textContent = value + "%";
 
-  if (gutMesh && gutVisible) {
+  if (bodyMesh && bodyVisible) {
     const val = value / 100;
-    gutMesh.traverse(child => {
+    bodyMesh.traverse(child => {
       if (child.isMesh) {
         child.material.transparent = val < 1.0;
         child.material.opacity = val;
