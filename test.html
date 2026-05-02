@@ -102,13 +102,21 @@
         width: 7px;
         height: 7px;
         border-radius: 50%;
-        background: #e8c547;
         display: inline-block;
         transition: opacity 0.2s;
       }
 
       .btn-dot.hidden {
         opacity: 0.25;
+      }
+
+      .btn-dot-body { background: #a8c5e8; }
+
+      .controls-divider {
+        width: 1px;
+        height: 24px;
+        background: #d8d2c8;
+        margin: 0 0.25rem;
       }
 
       .slider-group {
@@ -141,7 +149,7 @@
       .opacity-slider {
         -webkit-appearance: none;
         appearance: none;
-        width: 110px;
+        width: 100px;
         height: 1px;
         background: #c8c2b8;
         outline: none;
@@ -160,7 +168,7 @@
       }
 
       .opacity-slider::-webkit-slider-thumb:hover {
-        background: #e8c547;
+        background: #a8c5e8;
       }
 
       .opacity-slider::-moz-range-thumb {
@@ -234,7 +242,7 @@
 
     <div class="viewer-label">
       <span class="viewer-title">Remiped crustacean</span>
-      <span class="viewer-subtitle">Anterior body · Posterior gut (yellow)</span>
+      <span class="viewer-subtitle">Body (blue) · Gut (yellow)</span>
       <span class="viewer-hint">Drag to rotate · Scroll to zoom</span>
     </div>
 
@@ -246,22 +254,26 @@
     </div>
 
     <div class="viewer-controls">
-      <button class="viewer-btn active" id="toggleBtn" onclick="toggleBody()">
-        <span class="btn-dot" id="btnDot"></span>
-        Anterior body
-      </button>
 
-      <div class="slider-group" id="sliderGroup">
+      <!-- Body controls only -->
+      <button class="viewer-btn" id="toggleBodyBtn" onclick="toggleBody()">
+        <span class="btn-dot btn-dot-body" id="bodyDot"></span>
+        Body
+      </button>
+      <div class="slider-group" id="bodySliderGroup">
         <label class="slider-label">Opacity</label>
-        <input type="range" min="0" max="100" value="100" class="opacity-slider" id="opacitySlider" oninput="setBodyOpacity(this.value)">
-        <span class="slider-value" id="sliderValue">100%</span>
+        <input type="range" min="0" max="100" value="100" class="opacity-slider" id="bodySlider" oninput="setBodyOpacity(this.value)">
+        <span class="slider-value" id="bodySliderValue">100%</span>
       </div>
 
+      <div class="controls-divider"></div>
+
+      <!-- Reset -->
       <button class="viewer-btn secondary" onclick="resetCamera()">
         Reset view
       </button>
-    </div>
 
+    </div>
   </div>
 </main>
 
@@ -317,26 +329,37 @@ const rimLight = new THREE.DirectionalLight(0x8899cc, 0.4);
 rimLight.position.set(-5, -2, -5);
 scene.add(rimLight);
 
-// Load model
-let bodyMesh = null;
+// Mesh groups
+let bodyMeshes = [];
+let bodyVisible = true;
 let defaultCameraPos = new THREE.Vector3();
-let defaultTarget = new THREE.Vector3();
+let defaultTarget    = new THREE.Vector3();
+
+function setOpacity(meshes, opacity) {
+  meshes.forEach(mesh => {
+    mesh.traverse(child => {
+      if (child.isMesh) {
+        child.material.transparent = opacity < 1.0;
+        child.material.opacity = opacity;
+        child.material.needsUpdate = true;
+      }
+    });
+  });
+}
 
 const loader = new GLTFLoader();
 loader.load(
-  "Models/Remiped2.glb",
+  "Models/Remiped3.glb",
   function (gltf) {
     const model = gltf.scene;
 
-    // Center model
     const box = new THREE.Box3().setFromObject(model);
     const center = box.getCenter(new THREE.Vector3());
     const size = box.getSize(new THREE.Vector3());
     model.position.sub(center);
 
-    // Closer initial zoom
     const maxDim = Math.max(size.x, size.y, size.z);
-    camera.position.set(0, maxDim * 0.4, maxDim * 1);
+    camera.position.set(0, maxDim * 0.4, maxDim * 1.2);
     controls.target.set(0, 0, 0);
     controls.update();
 
@@ -349,20 +372,19 @@ loader.load(
       if (child.isMesh) console.log("Mesh found:", child.name);
     });
 
-    // Target the body mesh
-    bodyMesh = model.getObjectByName("body");
-    if (!bodyMesh) {
-      console.warn("⚠️ Mesh 'body' not found — check names logged above.");
-    }
+    const body1 = model.getObjectByName("body1");
+    const body2 = model.getObjectByName("body2");
+    if (body1) bodyMeshes.push(body1);
+    if (body2) bodyMeshes.push(body2);
 
-    // Hide loading screen
+    if (bodyMeshes.length === 0) console.warn("⚠️ No body meshes found.");
+
     loadingFill.style.width = "100%";
     setTimeout(() => loadingEl.classList.add("fade-out"), 300);
   },
   function (xhr) {
     if (xhr.lengthComputable) {
-      const pct = (xhr.loaded / xhr.total) * 90;
-      loadingFill.style.width = pct + "%";
+      loadingFill.style.width = (xhr.loaded / xhr.total * 90) + "%";
     }
   },
   function (err) {
@@ -371,56 +393,21 @@ loader.load(
   }
 );
 
-// Toggle body on/off
-let bodyVisible = true;
-
+// Body toggle
 window.toggleBody = function () {
-  if (bodyMesh) {
-    bodyVisible = !bodyVisible;
-
-    const slider = document.getElementById("opacitySlider");
-    const sliderGroup = document.getElementById("sliderGroup");
-
-    if (bodyVisible) {
-      const val = slider.value / 100;
-      bodyMesh.traverse(child => {
-        if (child.isMesh) {
-          child.material.transparent = val < 1.0;
-          child.material.opacity = val;
-          child.material.needsUpdate = true;
-        }
-      });
-      sliderGroup.classList.remove("disabled");
-    } else {
-      bodyMesh.traverse(child => {
-        if (child.isMesh) {
-          child.material.transparent = true;
-          child.material.opacity = 0;
-          child.material.needsUpdate = true;
-        }
-      });
-      sliderGroup.classList.add("disabled");
-    }
-
-    document.getElementById("btnDot").classList.toggle("hidden", !bodyVisible);
-    document.getElementById("toggleBtn").style.color = bodyVisible ? "" : "#aaa";
-  }
+  bodyVisible = !bodyVisible;
+  const slider = document.getElementById("bodySlider");
+  const val = bodyVisible ? slider.value / 100 : 0;
+  setOpacity(bodyMeshes, val);
+  document.getElementById("bodySliderGroup").classList.toggle("disabled", !bodyVisible);
+  document.getElementById("bodyDot").classList.toggle("hidden", !bodyVisible);
+  document.getElementById("toggleBodyBtn").style.color = bodyVisible ? "" : "#aaa";
 };
 
-// Opacity slider
+// Body opacity slider
 window.setBodyOpacity = function (value) {
-  document.getElementById("sliderValue").textContent = value + "%";
-
-  if (bodyMesh && bodyVisible) {
-    const val = value / 100;
-    bodyMesh.traverse(child => {
-      if (child.isMesh) {
-        child.material.transparent = val < 1.0;
-        child.material.opacity = val;
-        child.material.needsUpdate = true;
-      }
-    });
-  }
+  document.getElementById("bodySliderValue").textContent = value + "%";
+  if (bodyVisible) setOpacity(bodyMeshes, value / 100);
 };
 
 // Reset camera
