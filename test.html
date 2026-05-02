@@ -110,7 +110,7 @@
         opacity: 0.25;
       }
 
-      .btn-dot-body { background: #a8c5e8; }
+      .btn-dot-body { background: #c0bdb8; }
 
       .controls-divider {
         width: 1px;
@@ -242,7 +242,7 @@
 
     <div class="viewer-label">
       <span class="viewer-title">Remiped crustacean</span>
-      <span class="viewer-subtitle">Body (blue) · Gut (yellow)</span>
+      <span class="viewer-subtitle">Body (white) · Gut (yellow)</span>
       <span class="viewer-hint">Drag to rotate · Scroll to zoom</span>
     </div>
 
@@ -320,7 +320,7 @@ controls.minDistance = 0.5;
 controls.maxDistance = 50;
 
 // Lights
-const hemiLight = new THREE.HemisphereLight(0xffffff, 0x222222, 1.2);
+const hemiLight = new THREE.HemisphereLight(0xffffff, 0x222222, 1);
 scene.add(hemiLight);
 const dirLight = new THREE.DirectionalLight(0xffffff, 1.5);
 dirLight.position.set(5, 8, 5);
